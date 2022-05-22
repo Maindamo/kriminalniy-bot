@@ -1,0 +1,153 @@
+.GetQuoteContainer {
+    
+  background-color: #333;
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-m);     
+}
+
+.PersonalServiceContainer,
+.LatestNewsContainer {
+      padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+    background-color: var(--color-neutral-0); 
+}
+
+.OtherServiceContainer, 
+.FindUsCareerContainer,
+.DownloadAppContainer {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+    background-color: var(--color-neutral-2);    
+}
+
+.FooterContainer{
+    position: relative;
+}
+
+.WelcomeMessage {
+    margin-top: 50px;
+}
+
+.QuoteBox {
+    background-color: #333;
+}
+
+.NewsAndOtherServicesBox {
+    background-color: var(--color-neutral-0);
+}
+
+.NewsAndOtherServicesBox .Content,
+.FindUsBox .Content {
+    box-shadow: none;
+}
+
+.FindUsWrapper .InputBox {
+    margin-bottom: var(--space-s);
+}
+
+ .finduscontainer{
+       height: 100%;
+         background-color: #333;
+    border: 1px solid var(--color-neutral-7);
+    }
+
+/*=== new section add ==*/
+.introducing-block {
+    background-image: url("");
+    min-height: 438px;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    background-color: #FFF;
+}
+.introducing-content-blcok {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+.introducing-image-block {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+}
+.head-top-intro{
+    display: block;
+    font-size: 18px;
+    color:#A0A8B1;
+}
+.introducing-content-blcok .heading2 {
+    color: #333333;
+    display: block;
+    margin: 4px 0 27px;
+}
+.head-intro-p {
+    font-size: 14px;
+    line-height: 21px;
+    color: #5C5E60;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 40px;
+}
+.introducing-content-inner {
+    max-width: 356px;
+    margin-top: 50px;
+}
+.introducing-btn-blcok .btn-gry {
+    color: #8495A3;
+    border-color: #8495A3;    
+}
+.introducing-btn-blcok .btn {
+    min-width: 175px;
+    margin-right: 20px;
+    margin-left: 0px;
+}
+.is-rtl .introducing-btn-blcok .btn{
+    margin-right: 0px;
+    margin-left: 20px;
+}
+.introducing-image-block img {
+    position: relative;
+    right: -80px;
+}
+/*=== tablet ===*/
+.tablet.portrait .introducing-image-block img {
+    right: -40px;
+}
+.tablet.portrait .introducing-btn-blcok .btn {
+    min-width: 150px;
+}
+.tablet .introducing-block{
+    background-size: cover;
+}
+/*====== phone ===*/
+.phone .introducing-image-block {
+    width: 100%;
+    display: block;
+    float: none;
+}
+.phone .introducing-content-blcok {
+    width: 100%;
+    display: block;
+    vertical-align: top;
+    float: none;
+}
+.phone .introducing-image-block img {
+    right: 0;
+}
+.phone .introducing-content-inner {
+    max-width: 100%;
+    margin-top: 10px;
+}
+.phone .introducing-content-blcok .heading2{
+    margin: 4px 0 15px;
+}
+.phone .introducing-block{
+    padding: 30px 0;
+    background-size: cover;
+}
+.popup-changes{
+    max-width: 850px;
+    padding: 0px;
+    max-height: 493px;
+}

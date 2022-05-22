@@ -1,0 +1,52 @@
+.swal-text {
+  text-align: center;
+}
+.pictures-container {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(3, 0.07fr);
+  transition: 0.2s all;
+}
+
+.pictures-element,
+.pictures-element img {
+  width: 86px;
+}
+
+@media (min-width: 375px) {
+  .pictures-element,
+  .pictures-element img {
+    width: 104px;
+  }
+}
+
+@media (min-width: 425px) {
+  .pictures-element,
+  .pictures-element img {
+    width: 121px;
+  }
+}
+
+@media (min-width: 425px) {
+  .pictures-element,
+  .pictures-element img {
+    width: 146px;
+  }
+}
+
+.pictures-element {
+  cursor: pointer;
+}
+
+.pictures-element:hover {
+  opacity: 0.7;
+}
+
+.pictures-container.disabled {
+  filter: blur(3px);
+}
+
+.pictures-container.disabled .pictures-element {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

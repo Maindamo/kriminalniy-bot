@@ -1,0 +1,129 @@
+.IconsContainer{
+    padding: 5px;
+    text-align: right;
+}
+.is-rtl .phone .IconsContainer{
+    padding: 5px;
+    text-align: left;
+}
+.is-rtl .IconsContainer{
+    padding: 5px;
+    text-align: left;
+}
+
+.sidebar {
+    transform: none;
+    
+}
+
+.sidebar.sidebar-open {
+    background-color: var(--color-neutral-3);
+    box-shadow: var(--shadow-l);
+    height: 100vh;
+    overflow-y: auto;
+    left: 0;
+    top: 0;
+    width: 360px;
+    z-index: 1000;
+    transform: none;
+}
+
+.sidebar-header, 
+.sidebar-content {
+     padding: 0px !important;
+}
+
+.is-rtl .sidebar.sidebar-open {
+    right: 0%;
+
+}
+
+i.icon.cross.fa.fa-remove.fa-2x {
+    font-size: 1.5em;
+    padding-top: 7px;
+}
+
+.icon .cross .fa .fa-remove .fa-2x{
+    font-size: 1.5em;
+    padding-top: 7px;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.MenuContainer{
+    background: #FFFFFF00 0% 0% no-repeat padding-box;
+    opacity: 1;border-bottom: 1px solid #BCC5D0;padding: var(--space-base) var(--space-m);    display: flex;align-items: center;cursor: pointer;    
+}
+
+div.MenuContainer.ActiveContainer{
+    background: #00AAE72B 0% 0% no-repeat padding-box;
+}
+
+.CircleDiv{
+    text-align: center;
+    cursor: pointer;
+    width: 37px;
+    margin-left: 20px;
+    background-color: #5272ac;  
+    height: 37px;
+    border-radius: 50px !important;
+}
+
+.is-rtl .CircleDiv{
+    margin-left: 0px;
+    margin-right: 20px;
+}
+
+.MenuLabel{
+    letter-spacing: 0;
+    color: #333333;
+    opacity: 1;
+    font-size: 18px;
+    width:95%;
+}
+
+span.MenuLabel.ActiveLabel {
+    color: #00AAE7;
+}
+
+.SubMenuLabel{
+    font-size:18px;
+    letter-spacing: 0;
+    color: #333333;
+    opacity: 1;
+    width: 95%
+}
+
+.SubMenuContainer{
+    border: 1px solid #DDDCDB;
+    border-radius: 4px;
+    opacity: 1;
+    padding: 10px var(--space-m);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.SubSubMenuContainer{
+    border: 1px solid #DDDCDB;
+    border-radius: 4px;
+    opacity: 1;padding: 7px var(--space-m);
+    cursor: pointer;
+    display:flex;
+    align-items:center;
+}
+
+.phone .sidebar {
+    width: 100vw !important;
+}
+
+.secondheader{
+    text-align: left;
+    background-color: rgb(32, 61, 124);
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}

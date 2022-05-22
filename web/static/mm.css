@@ -1,0 +1,369 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #fafafa;
+    color: #2B2B2B;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 100px;
+}
+
+/* Global */
+header {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: 10px 15px;
+}
+
+main {
+    max-width: 1170px;
+    margin-top: 85px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+a {
+    color: #018ad2;
+    font-size: 14px;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+     -moz-transition: all .2s;
+     -o-transition: all .2s;
+    text-decoration: none;
+}
+
+/* Selection Top */
+.selection-top {
+    background-color: #fff;
+    margin-bottom: 32px;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px -20px rgba(117, 115, 111, 0.3);
+    padding: 40px;
+}
+
+.selection-top .title {
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: bold;
+    margin-bottom: 23px;
+}
+
+.selection-top .pr-name {
+    color: rgba(43, 43, 43, 1);
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 0px;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    line-break: normal;
+    hyphens: manual;
+}
+
+.selection-top .pr-price {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.selection-top .pr-image {
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+    border-radius: 3px;
+}
+
+.selection-top .text-block {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    width: 65%;
+}
+
+
+/* Buyer Selection */
+.selection-buyer {
+    width: 65%;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px -20px rgba(117, 115, 111, 0.3);
+    display: inline-block;
+    vertical-align: top;
+}
+
+.selection-buyer_content {
+    padding: 40px;
+}
+
+.delivery-info {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+}
+
+.delivery-info .delivery-img {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.text-block {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.delivery-info .delivery-text {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.delivery-info .delivery-text:nth-child(1) {
+    margin-bottom: 5px;
+}
+
+.label-block {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.label-block label {
+    font-size: 16px;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.label-block input {
+    font-size: 13px;
+    color: #020202;
+    transition: border-color .5s;
+    -webkit-transition: border-color .5s;
+     -moz-transition: border-color .5s;
+     -o-transition: border-color .5s;
+    border: 1px solid;
+    border-color: #e8e8e8;
+    background-color: #fff;
+    padding: 9px 16px;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.label-block input:focus {
+    border-color: #ff00ec;
+}
+
+.label-block input.input-max {
+    width: 52.5%;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.label-block input.input-mid {
+    width: 40%;
+}
+
+.label-block input.input-min {
+    width: 30%;
+    margin-bottom: 15px;
+}
+
+.label-block input.input-min:nth-child(2), .label-block input.input-min:nth-child(3) {
+    margin-right: 15px;
+}
+
+
+/* Selection Right */
+.selection-right {
+    width: 34%;
+    float: right;
+    box-shadow: 0 25px 60px -20px rgba(117, 115, 111, 0.3);
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.price-block .price {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.price-block .commission {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.button-pay {
+    text-align: center;
+    padding: 12px 16px;
+    font-family: 'Proxima SemiBold';
+    margin-right: auto;
+    margin-left: auto;
+    width: -webkit-fill-available;
+    background-color: #ffdf39;
+    border-radius: 6px;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 300px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.button-pay:hover {
+    transform: scale(1.01);
+    text-align: center;
+    padding: 12px 16px;
+    font-family: 'Proxima SemiBold';
+    margin-right: auto;
+    margin-left: auto;
+    width: -webkit-fill-available;
+    background-color: #ffe873;
+    border-radius: 6px;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 300px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.selection-right .button-pay {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.safery-info {
+    font-size: 15px;
+}
+
+.safery-info img {
+    width: 22px;
+    vertical-align: bottom;
+    margin-right: 5px;
+}
+
+.agreement-info {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+
+/* Mobile Attributes */
+.mobile-safery {
+    display: none;
+    background: #fff;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px -20px rgba(117, 115, 111, 0.3);
+    margin-bottom: 20px;
+}
+
+footer {
+    padding: 0 11px 10px;
+    z-index: 100;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    display: none;
+}
+
+.footer-summary {
+    margin-bottom: 10px;
+    height: 20px;
+}
+
+.footer-summary span {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+/*  Adaptation */
+@media (max-width: 950px) {
+    .mobile-safery {
+        display: block;
+    }
+
+    footer {
+        display: block;
+    }
+
+    .selection-right {
+        display: none;
+    }
+
+    .selection-buyer {
+        width: initial;
+    }
+
+    .label-block input.input-max {
+        width: 100%;
+        height: 40px;
+    }
+
+    .label-block input.input-mid {
+        width: 100%;
+        height: 40px;
+    }
+
+    .label-block input.input-min {
+        width: 100%;
+        height: 40px;
+    }
+
+    .selection-top {
+        padding: 10px;
+    }
+
+    .selection-top .pr-price {
+        position: absolute;
+        right: 20px;
+        bottom: 0px;
+        font-size: 18px;
+    }
+
+    .selection-top .pr-image {
+        width: 90px;
+        height: 90px;
+    }
+
+    .selection-top .title {
+        display: none;
+    }
+}
+
+@media (max-width: 630px) {
+    .delivery-info .delivery-img {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .selection-top .text-block {
+        width: 50%;
+    }
+}

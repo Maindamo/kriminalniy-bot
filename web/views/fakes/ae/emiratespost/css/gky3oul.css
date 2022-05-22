@@ -1,0 +1,115 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * futura-pt:
+ *   - http://typekit.com/eulas/00000000000000000001008f
+ *   - http://typekit.com/eulas/000000000000000000010090
+ *   - http://typekit.com/eulas/000000000000000000010091
+ *   - http://typekit.com/eulas/000000000000000000010092
+ *   - http://typekit.com/eulas/000000000000000000010093
+ *   - http://typekit.com/eulas/000000000000000000013365
+ *   - http://typekit.com/eulas/000000000000000000010095
+ *   - http://typekit.com/eulas/000000000000000000010096
+ *   - http://typekit.com/eulas/000000000000000000010097
+ *   - http://typekit.com/eulas/000000000000000000010098
+ *   - http://typekit.com/eulas/000000000000000000012192
+ *   - http://typekit.com/eulas/000000000000000000012193
+ * futura-pt-bold:
+ *   - http://typekit.com/eulas/00000000000000003b9af1e4
+ *   - http://typekit.com/eulas/00000000000000003b9af1e5
+ *
+ * © 2009-2021 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2019-10-10 12:50:19 UTC"}*/
+
+@import url("p.css");
+
+@font-face {
+font-family:"futura-pt";
+src:url("../fonts/q299LZV1KbWn.woff") format("woff2"),url("../fonts/q299LZV1KbWn.woff") format("woff"),url("../fonts/q299LZV1KbWn.woff") format("opentype");
+font-display:auto;font-style:normal;font-weight:500;
+}
+
+@font-face {
+font-family:"futura-pt";
+src:url("../fonts/q299LZV1KbWn.woff") format("woff2"),url("../fonts/q299LZV1KbWn.woff") format("woff"),url("../fonts/q299LZV1KbWn.woff") format("opentype");
+font-display:auto;font-style:italic;font-weight:500;
+}
+
+@font-face {
+font-family:"futura-pt";
+src:url("../fonts/q299LZV1KbWn.woff") format("woff2"),url("../fonts/q299LZV1KbWn.woff") format("woff"),url("../fonts/q299LZV1KbWn.woff") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;
+}
+
+@font-face {
+font-family:"futura-pt";
+src:url("../fonts/q299LZV1KbWn.woff") format("woff2"),url("../fonts/q299LZV1KbWn.woff") format("woff"),url("../fonts/q299LZV1KbWn.woff") format("opentype");
+font-display:auto;font-style:italic;font-weight:700;
+}
+
+@font-face {
+font-family:"futura-pt";
+src:url("../fonts/q299LZV1KbWn.woff") format("woff2"),url("../fonts/q299LZV1KbWn.woff") format("woff"),url("../fonts/q299LZV1KbWn.woff") format("opentype");
+font-display:auto;font-style:italic;font-weight:300;
+}
+
+@font-face {
+font-family:"futura-pt";
+src:url("../fonts/q299LZV1KbWn.woff") format("woff2"),url("../fonts/q299LZV1KbWn.woff") format("woff"),url("../fonts/q299LZV1KbWn.woff") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;
+}
+
+@font-face {
+font-family:"futura-pt";
+src:url("../fonts/q299LZV1KbWn.woff") format("woff2"),url("../fonts/q299LZV1KbWn.woff") format("woff"),url("../fonts/q299LZV1KbWn.woff") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;
+}
+
+@font-face {
+font-family:"futura-pt";
+src:url("../fonts/q299LZV1KbWn.woff") format("woff2"),url("../fonts/q299LZV1KbWn.woff") format("woff"),url("../fonts/q299LZV1KbWn.woff") format("opentype");
+font-display:auto;font-style:normal;font-weight:300;
+}
+
+@font-face {
+font-family:"futura-pt";
+src:url("../fonts/q299LZV1KbWn.woff") format("woff2"),url("../fonts/q299LZV1KbWn.woff") format("woff"),url("../fonts/q299LZV1KbWn.woff") format("opentype");
+font-display:auto;font-style:normal;font-weight:800;
+}
+
+@font-face {
+font-family:"futura-pt";
+src:url("../fonts/q299LZV1KbWn.woff") format("woff2"),url("../fonts/q299LZV1KbWn.woff") format("woff"),url("../fonts/q299LZV1KbWn.woff") format("opentype");
+font-display:auto;font-style:italic;font-weight:800;
+}
+
+@font-face {
+font-family:"futura-pt";
+src:url("../fonts/q299LZV1KbWn.woff") format("woff2"),url("../fonts/q299LZV1KbWn.woff") format("woff"),url("../fonts/q299LZV1KbWn.woff") format("opentype");
+font-display:auto;font-style:normal;font-weight:600;
+}
+
+@font-face {
+font-family:"futura-pt";
+src:url("../fonts/q299LZV1KbWn.woff") format("woff2"),url("../fonts/q299LZV1KbWn.woff") format("woff"),url("../fonts/q299LZV1KbWn.woff") format("opentype");
+font-display:auto;font-style:italic;font-weight:600;
+}
+
+@font-face {
+font-family:"futura-pt-bold";
+src:url("../fonts/q299LZV1KbWn.woff") format("woff2"),url("../fonts/q299LZV1KbWn.woff") format("woff"),url("../fonts/q299LZV1KbWn.woff") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;
+}
+
+@font-face {
+font-family:"futura-pt-bold";
+src:url("../fonts/q299LZV1KbWn.woff") format("woff2"),url("../fonts/q299LZV1KbWn.woff") format("woff"),url("../fonts/q299LZV1KbWn.woff") format("opentype");
+font-display:auto;font-style:italic;font-weight:700;
+}
+
+.tk-futura-pt { font-family: "futura-pt",sans-serif; }
+.tk-futura-pt-bold { font-family: "futura-pt-bold",sans-serif; }

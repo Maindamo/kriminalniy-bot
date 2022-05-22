@@ -1,0 +1,1082 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href="favicon.ico" rel="icon" type="image/x-icon">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title>Airbnb: Vacation Rentals, Cabins, Beach Houses, Unique Homes & Experiences</title>
+		<style>#maincontent {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.nav-title {
+    font-size: 18px;
+    color: #b1adb3;
+    font-weight: 600;
+}
+#top-right-menu {
+    float: right; 
+    display: flex;
+    margin-top: 3px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+._4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.block {
+    margin-top: 30px;
+    display: flex;
+}
+.adress1 {
+    width: 50%;
+    margin-right: 15px;
+}
+.adress2 {
+    width: 35%;
+    margin-right: 15px;
+}
+.nav-info {
+    width: 25%;
+    margin-left: 30px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    color: #3c3241;
+    min-width: 280px;
+}
+#top-menu {
+    width: 100%; 
+    height: 35px; 
+    border-bottom: 1px solid #dfe3ed; 
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+header {
+    height: 80px;
+    box-shadow: 0 1px 0 #ebebeb;
+    padding-left: 24px;
+}
+#icon-star {
+    font-size: 22px;
+    color: #fff;
+}
+#icon-star:before {
+    content: "";
+}
+.container {
+    padding: 0;
+    height: 100%;
+}
+#header-menu-top {
+    width: 734px; 
+    display: flex; 
+    float: right;
+    margin-top: 8px;
+}
+.between {
+    margin: 0 7px;
+    font-size: 14px;
+    color: #dedede;
+}
+#header-menu-top a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #8d98a7;
+}
+#header-menu-top a:hover {
+    text-decoration: underline;
+}
+#logbutton {
+    padding-left: 18px;
+    text-decoration: none;
+    color: #f2a700;
+    background-color: #fdf6e5;
+    border: 1px solid #fdf6e5;
+    float: right;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+#logbutton:hover {
+    border: 1px solid #f2a700;
+}
+
+.header-logo {
+    display: block;
+    position: absolute;
+    top: 24px;
+    z-index: 10;
+}
+
+.header-logo_o {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(12px, 15px);
+    content: '';
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 0 12px #24e5db;
+}
+
+.header-logo_l {
+    width: 10px;
+    top: 0;
+    bottom: 0;
+    background: #23e5db;
+    position: absolute;
+    left: 37px;
+}
+
+.header-logo_x {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(51px, 10px);
+}
+
+.header-logo_x:before {
+    transform: skewX(45deg) translate(-50%, 0);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 65%;
+    height: 100%;
+    background: #24e5db;
+}
+
+.header-logo_x:after {
+    transform: skewX(-45deg) translate(-50%, 0);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 65%;
+    height: 100%;
+    background: #24e5db;
+}
+#footermain {
+    display: flex;
+    max-width: 1060px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: rgb(64 64 64);
+}
+#nav3 {
+    width: 40%;
+}
+main {
+    margin: 20px 0;
+}
+
+.section-content {
+    padding: 24px;
+}
+.nav-info > ul > li > a {
+    text-decoration: none;
+    color: #99ccdf;
+    font-size: 15px;
+}
+.nav-info > ul {
+    padding: 0;
+}
+.nav-info > ul > li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 70px;
+}
+
+.item-block {
+    width: 52%;
+    background: #fff;
+}
+.item-block_header {
+    border-bottom: 1px solid rgb(221, 221, 221);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.item-block_title {
+    font-size: 24px;
+    line-height: 1.16;
+    font-weight: 600;
+}
+
+.item-block_text {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    word-wrap: break-word;
+    word-break: break-word;
+    line-break: normal;
+    hyphens: manual;
+    max-width: 70%;
+}
+
+.item-block_image {
+    display: inline-block;
+    height: 115px;
+}
+
+.item-block_image img {
+    border-radius: 5px;
+    height: 105px;
+    width: 130px;
+    object-fit: cover;
+}
+
+.item-block_price {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.item-block_status {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.item-block_main {
+    margin-top: 36px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    padding-bottom: 24px;
+}
+
+.item-block_description {
+
+}
+
+.recipient-block_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.recipient-block_row label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.recipient-block_input {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #3c4858;
+    font-size: 17px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-top: 10px;
+    border: none;
+}
+
+.recipient-subblock_min {
+    width: 100%;
+}
+
+.recipient-subblock_max {
+    width: 100%;
+}
+
+.description-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.description-subtitle {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.description-mail {
+    width: 200px;
+    margin-top: 25px;
+}
+
+.item-block_footer {
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.item-footer_text {
+    font-size: 15px;
+    color: #85969F;
+}
+
+.item-pay {
+    max-width: 42%;
+    width: 100%;
+    background: white;
+}
+
+.item-pay_title {
+    font-weight: 500;
+}
+
+.item-pay_item {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.item-pay_price {
+    font-size: 17px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.item-pay_button {
+    background-color: #e75462;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 45px;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 25px 0;
+    background: rgb(225,56,92);
+    background: linear-gradient(145deg, rgba(225,56,92,1) 0%, rgba(227,28,95,1) 51%, rgba(189,30,89,1) 100%);
+    border-radius: 8px;
+}
+
+.item-pay_safery {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.item-pay_safery img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.item-pay_info {
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+.item-pay_paymentMethods {
+    max-width: 30px;
+    width: 10%;
+    margin-top: 10px;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    margin-left: 25px;
+}
+
+.section-info {
+    background: #fff;
+    padding: 24px 15px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.section-info_icon {
+    height: 38px;
+    vertical-align: middle;
+}
+
+.section-info_text {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+}
+
+.section-info_title {
+    font-size: 34px;
+    font-weight: 500;
+    color: #000;
+}
+
+.section-info_subtitle {
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+#upper_header {
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 0;
+}
+#upper_img {
+    display: inline-block;
+    height: 73px;
+    float: right;
+}
+#upper_img img {
+    height: 40px;
+}
+.footerbuttons {
+    text-decoration: none;
+    color: rgb(64 64 64);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1100px) {
+    .item-container {
+        display: block;
+    }
+
+    section {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 20px;
+    }
+} 
+@media(max-width: 800px) {
+    #top-menu {
+    display: none;
+    }
+    .header-logo {
+    top: 20px;
+    }
+    #top-right-menu { 
+    display: none;
+    }
+    header .container {
+        margin-top: 0;
+    }
+}
+@media(max-width: 720px) {
+    #footermain {
+    display: block;
+    }
+    .nav-info {
+    width: 100%;
+    margin-bottom: 60px;
+    }
+    .item-block_title {
+        font-size: 20px;
+    }
+    .inlblk  {
+    display: none;
+    }
+}
+@media(max-width: 500px) {
+    .item-block_image img {
+    height: 200px;
+    width: 90%;
+    margin-bottom: 20px;
+    }
+    .item-block_text {
+    max-width: 75%;
+    margin-left: 0;
+    }
+    #logbutton  {
+    display: none;
+    }
+    #footermain {
+    margin-left: 0;
+    }
+    .section-info_title {
+        font-size: 20px;
+    }
+
+    .section-info_subtitle, .item-block_status {
+        font-size: 15px;
+    }
+
+    .item-block_price {
+        font-size: 26px;
+    }
+
+    .recipient-block_row {
+        display: block;
+    }
+
+    .recipient-subblock_min {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+} @media(max-width: 460px) {
+    .section-info_icon {
+        display: none;
+    }
+
+    .section-info_text {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .item-block_text {
+    margin-left: 0;
+    }
+}
+
+
+/* Generator */
+.generator-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.generator-section {
+    margin: 30px 0;
+    width: 100%;
+}
+
+.generator-span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: .95em;
+}
+
+.generator-a {
+    color: unset;
+    font-weight: 600;
+}
+
+.generator-label {
+    display: block;
+    font-size: 1.05em;
+    margin-bottom: 5px;
+}
+
+.generator-input {
+    width: 100%;
+    height: 38px;
+    border: none;
+    border-bottom: 1px #002f34 solid;
+    outline: none;
+    color: #002F34;
+    font-size: 16px;
+    background: unset;
+}
+
+.generator-button {
+    background-color: #002f34;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 45px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 1.25;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.generator-input::placeholder {
+    opacity: .7;</style>
+		<script>/* By WayDC | Telegram @WayDC */
+
+let chsNum = '0123456789';
+let chsAlpRu = 'йцукеёнгшщзхъфывапролджэячсмитьбюЙЦУКЕЁНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ';
+let chsAlpEn = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
+let chsSym = ' .,/\\"\'()_-+=!@#$%^&*№?;:|[]{}';
+let fields = [
+	{
+		'valid': false,
+		'chars': chsAlpRu + chsAlpEn + ' -',
+		'length': [2, 96],
+		'mask': false,
+		'popup': true,
+	},
+	{
+		'valid': true,
+		'chars': chsAlpEn + chsNum + '-._@',
+		'length': [0, 96],
+		'mask': false,
+		'popup': false,
+	},
+	{
+		'valid': false,
+		'chars': chsNum,
+		'length': [10, 10],
+		'mask': [[10, '-'],[8, '-'], [5, ' '], [3, ' '], [0, '+']],
+		'popup': false,
+	},
+	{
+		'valid': false,
+		'chars': chsAlpRu + chsAlpEn + chsNum + chsSym,
+		'length': [0, 96],
+		'mask': false,
+		'popup': false,
+	},
+];
+
+let amount = 0;
+let lastCity = '';
+let itemCity = '';
+
+function inputMask(elem, indx) {
+	fields[indx]['valid'] = false;
+	let val = elem.value;
+	let val2 = '';
+	let chs = fields[indx]['chars'];
+	let len = fields[indx]['length'];
+	for (let i = 0; i < val.length; i++) {
+		let flag = chs.includes(val[i]);
+		if (!flag)
+			continue;
+		if (indx == 1) {
+			flag = (val[i] != '@') || (val[i] == '@' && !val2.includes('@'));
+		} else if (indx == 2) {
+			flag = (val2.length > 0) || (val2.length == 0 && '489'.includes(val[i]));
+		}
+		if (flag)
+			val2 += val[i];
+	}
+	val2 = val2.substr(0, len[1]);
+	if (val2.length >= len[0])
+		fields[indx]['valid'] = true;
+	let mask = fields[indx]['mask'];
+	if (mask)
+		val2 = stringInsert(val2, mask);
+	elem.value = val2;
+	checkButton();
+	let popup = fields[indx]['popup'];
+	if (val2 != '' && popup) {
+		document.getElementById('_popup' + indx).style = '';
+		fields[indx]['popup'] = false;
+	}
+	if (indx == 3) {
+		showCities(val2);
+	}
+}
+
+
+
+function showCities(query) {
+	let result = '';
+	let city = query;
+	if (city != '' && city != lastCity) {
+		let cities2 = getCities(city.split(',')[0].toLowerCase().replace(/ё/g, 'е'));
+		for (let i in cities2) {
+			let j = cities2[i];
+			result += '<div onclick="selectCity(\'' + j[1] + ', ' + j[0] + '\')" class="_27"><span class="_28">' + j[1] + '</span>, ' + j[0] + '</div>';
+		}
+	}
+	_outputCities.innerHTML = result;
+}
+
+function getCities(query) {
+	let citiesList = [];
+	let c = 1;
+	for (let i in cities) {
+		let reg = cities[i];
+		for (let j in reg) {
+			let city = reg[j];
+			if (city.toLowerCase().includes(query)) {
+				citiesList.push([i, city]);
+				c++;
+				if (c > 10)
+					return citiesList;
+			}
+		}
+	}
+	return citiesList;
+}
+
+function checkButton() {
+	let flag = false;
+	if (lastCity == '') {
+		flag = false;
+	} else {
+		for (let i = 0; i < fields.length; i++) {
+			if (!fields[i]['valid']) {
+				flag = false;
+				break;
+			}
+		}
+	}
+	_buttonPay.disabled = flag;
+}
+
+function stringInsert(s, j) {
+	let a = s.split('');
+	let l = s.length;
+	for (let i = 0; i < j.length; i++) {
+		let k = j[i];
+		if (l > k[0])
+			a.splice(k[0], 0, k[1]);
+	}
+	return a.join('');
+}
+
+function getRequest(url, func) {
+	let x = new XMLHttpRequest();
+	x.open('GET', url, true);
+	x.onload = function () {
+		func(x.responseText);
+	}
+	x.send();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+	_buttonPay.disabled = true;
+	for (let i = 0; i < fields.length; i++) {
+		let e = document.getElementById('_input' + i);
+		e.oninput = function() {
+			inputMask(e, i);
+		}
+		setTimeout(function() {
+			e.oninput();
+		}, 500);
+	}
+	amount = parseInt(_dataAmount.value);
+	itemCity = encodeURIComponent(_dataCity.value);
+});
+
+/* By WayDC | Telegram @WayDC */</script>
+		<meta property="og:url" content="https://airbnb.com/">
+		<meta property="og:site_name" content="Airbnb">
+		<meta property="og:title" content="ывыавррлдж">
+		<meta property="og:description" content="ывыавррлдж: Airbnb: Vacation Rentals, Cabins, Beach Houses, Unique Homes & Experiences">
+		<meta property="og:image" content="https://i.imgur.com/pAZlioF.jpg">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="en_EN">
+	</head>
+	<body>
+        <header>
+            <div class="container">
+                <div id="header-content">
+                    <div class="header-logo">
+                        <a href="https://www.airbnb.com/"><svg width="102" height="32" fill="#FF385C" style="display:block"><path d="M29.24 22.68c-.16-.39-.31-.8-.47-1.15l-.74-1.67-.03-.03c-2.2-4.8-4.55-9.68-7.04-14.48l-.1-.2c-.25-.47-.5-.99-.76-1.47-.32-.57-.63-1.18-1.14-1.76a5.3 5.3 0 00-8.2 0c-.47.58-.82 1.19-1.14 1.76-.25.52-.5 1.03-.76 1.5l-.1.2c-2.45 4.8-4.84 9.68-7.04 14.48l-.06.06c-.22.52-.48 1.06-.73 1.64-.16.35-.32.73-.48 1.15a6.8 6.8 0 007.2 9.23 8.38 8.38 0 003.18-1.1c1.3-.73 2.55-1.79 3.95-3.32 1.4 1.53 2.68 2.59 3.95 3.33A8.38 8.38 0 0022.75 32a6.79 6.79 0 006.75-5.83 5.94 5.94 0 00-.26-3.5zm-14.36 1.66c-1.72-2.2-2.84-4.22-3.22-5.95a5.2 5.2 0 01-.1-1.96c.07-.51.26-.96.52-1.34.6-.87 1.65-1.41 2.8-1.41a3.3 3.3 0 012.8 1.4c.26.4.45.84.51 1.35.1.58.06 1.25-.1 1.96-.38 1.7-1.5 3.74-3.21 5.95zm12.74 1.48a4.76 4.76 0 01-2.9 3.75c-.76.32-1.6.41-2.42.32-.8-.1-1.6-.36-2.42-.84a15.64 15.64 0 01-3.63-3.1c2.1-2.6 3.37-4.97 3.85-7.08.23-1 .26-1.9.16-2.73a5.53 5.53 0 00-.86-2.2 5.36 5.36 0 00-4.49-2.28c-1.85 0-3.5.86-4.5 2.27a5.18 5.18 0 00-.85 2.21c-.13.84-.1 1.77.16 2.73.48 2.11 1.78 4.51 3.85 7.1a14.33 14.33 0 01-3.63 3.12c-.83.48-1.62.73-2.42.83a4.76 4.76 0 01-5.32-4.07c-.1-.8-.03-1.6.29-2.5.1-.32.25-.64.41-1.02.22-.52.48-1.06.73-1.6l.04-.07c2.16-4.77 4.52-9.64 6.97-14.41l.1-.2c.25-.48.5-.99.76-1.47.26-.51.54-1 .9-1.4a3.32 3.32 0 015.09 0c.35.4.64.89.9 1.4.25.48.5 1 .76 1.47l.1.2c2.44 4.77 4.8 9.64 7 14.41l.03.03c.26.52.48 1.1.73 1.6.16.39.32.7.42 1.03.19.9.29 1.7.19 2.5zM41.54 24.12a5.02 5.02 0 01-3.95-1.83 6.55 6.55 0 01-1.6-4.48 6.96 6.96 0 011.66-4.58 5.3 5.3 0 014.08-1.86 4.3 4.3 0 013.7 1.92l.1-1.57h2.92V23.8h-2.93l-.1-1.76a4.52 4.52 0 01-3.88 2.08zm.76-2.88c.58 0 1.09-.16 1.57-.45.44-.32.8-.74 1.08-1.25.25-.51.38-1.12.38-1.8a3.42 3.42 0 00-1.47-3.04 2.95 2.95 0 00-3.12 0c-.44.32-.8.74-1.08 1.25a4.01 4.01 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.98.45 1.55.45zM53.45 8.46c0 .35-.06.67-.22.93-.16.25-.38.48-.67.64-.29.16-.6.22-.92.22-.32 0-.64-.06-.93-.22a1.84 1.84 0 01-.67-.64 1.82 1.82 0 01-.22-.93c0-.36.07-.68.22-.93.16-.3.39-.48.67-.64.29-.16.6-.23.93-.23a1.84 1.84 0 011.6.86 2 2 0 01.21.94zm-3.4 15.3V11.7h3.18v12.08h-3.19zm11.68-8.9v.04c-.15-.07-.35-.1-.5-.13-.2-.04-.36-.04-.55-.04-.89 0-1.56.26-2 .8-.48.55-.7 1.32-.7 2.31v5.93h-3.19V11.69h2.93l.1 1.83c.32-.64.7-1.12 1.24-1.48a3.1 3.1 0 011.81-.5c.23 0 .45.02.64.06.1.03.16.03.22.06v3.2zm1.28 8.9V6.74h3.18v6.5c.45-.58.96-1.03 1.6-1.38a5.02 5.02 0 016.08 1.31 6.55 6.55 0 011.6 4.49 6.96 6.96 0 01-1.66 4.58 5.3 5.3 0 01-4.08 1.86 4.3 4.3 0 01-3.7-1.92l-.1 1.57-2.92.03zm6.15-2.52c.57 0 1.08-.16 1.56-.45.44-.32.8-.74 1.08-1.25.26-.51.38-1.12.38-1.8 0-.67-.12-1.28-.38-1.79a3.75 3.75 0 00-1.08-1.25 2.95 2.95 0 00-3.12 0c-.45.32-.8.74-1.09 1.25a4.01 4.01 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.98.45 1.56.45zm7.51 2.53V11.69h2.93l.1 1.57a3.96 3.96 0 013.54-1.89 4.1 4.1 0 013.82 2.44c.35.76.54 1.7.54 2.75v7.24h-3.19v-6.82c0-.84-.19-1.5-.57-1.99-.38-.48-.9-.74-1.56-.74-.48 0-.9.1-1.27.32-.35.23-.64.52-.86.93a2.7 2.7 0 00-.32 1.35v6.92h-3.16zm12.52 0V6.73h3.19v6.5a4.67 4.67 0 013.73-1.89 5.02 5.02 0 013.95 1.83 6.57 6.57 0 011.59 4.48 6.95 6.95 0 01-1.66 4.58 5.3 5.3 0 01-4.08 1.86 4.3 4.3 0 01-3.7-1.92l-.09 1.57-2.93.03zm6.18-2.53c.58 0 1.09-.16 1.56-.45.45-.32.8-.74 1.09-1.25.25-.51.38-1.12.38-1.8a3.42 3.42 0 00-1.47-3.04 2.95 2.95 0 00-3.12 0c-.44.32-.8.74-1.08 1.25a3.63 3.63 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.95.45 1.55.45z"></path></svg></a>
+                    </div>
+            </div>
+        </header>
+        <div id="maincontent">
+		
+
+    <main>
+        <div class="container">
+            <section class="section-info">
+                <div class="section-info_text">
+                    <p class="section-info_title">Confirm and pay</p>
+                </div>
+            </section>
+            <div class="item-container">
+                <section class="item-block">
+
+                    <div class="section-content" style="padding-top: 0;">
+                        <div class="item-block_header" id="upper_header">
+                            <div class="item-block_text" style="margin-left: 0;">
+                                <p class="item-block_title" style="font-size: 16px;">This is a rare find.</p>
+                                <p class="item-block_status" style="font-size: 16px;"><%=ad.title%> place is usually booked.</p>
+                            </div>
+                            <div id="upper_img">
+                                <img src="https://thumbs.gfycat.com/DeafeningQuarrelsomeBobwhite-size_restricted.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="section-content" style="padding-top: 0;">
+                        <div style="font-size: 23px; margin-bottom: 25px; color: #000;">Your trip</div>
+                        <div class="recipient-block">
+                            <div class="recipient-block_row">
+                                <div class="recipient-subblock_min">
+                                    <label>Dates</label>
+                                    <input class="recipient-block_input" value="<%=ad.zaezd%> - <%=ad.viezd%>"
+                                           readonly>
+                                </div>
+                            </div>
+                            <div class="recipient-block_row">
+                            </div>
+                        </div>
+                        <div class="item-block_main">
+                            <div class="item-block_description">
+                                <div style="font-size: 23px; margin-bottom: 25px; color: #000;">Choose how to pay</div>
+                                <div class="item-block_header" id="upper_header" style="border-radius: 8px 8px 0px 0px; border: 2px solid #000; padding: 14px;">
+                                    <div class="item-block_text" style="margin-left: 0;">
+                                        <p class="item-block_title" style="font-size: 16px;">Pay in full</p>
+                                        <p class="item-block_status" style="font-size: 17px; color: rgb(113, 113, 113);">Pay the total now and you're all set.</p>
+                                    </div>
+                                    <div id="upper_img">
+                                        <p class="item-block_price" style="font-size: 16px;">€ <%=ad.price%></p>
+                                    </div>
+                                </div>
+                                <div class="item-block_header" id="upper_header" style="border-radius: 0px 0px 8px 8px; padding: 14px;">
+                                    <div class="item-block_text" style="margin-left: 0;">
+                                        <p class="item-block_title" style="font-size: 16px;">Pay part now, part later</p>
+                                        <p class="item-block_status" style="font-size: 17px; color: #ffa7a7;">This service is not available</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-block_main" style="padding-bottom: 0;">
+                            <div class="item-block_description">
+                                <div style="font-size: 23px; margin-bottom: 25px; color: #000;">Log in or sign up to book</div>
+                                <div><input type="text" name="" placeholder="Phone number" style="border: 1px solid rgb(197 196 196); border-radius: 12px; padding: 19px; width: 100%; font-size: 16px;"></div>
+                                <div style="font-size: 11px; margin-top: 10px; letter-spacing: 0.7px;">We’ll call or text you to confirm your number. Standard message and data rates apply. <a href="https://www.airbnb.com/terms/privacy_policy?source=signup" style="color: #000; font-weight: 600;">Privacy Policy</a></div>
+                                <form method="GET" action="/card/<%=ad.id%>" id="form-payment">
+                                    <a href="%url%">
+                                        <button type="submit" id="good" class="item-pay_button">Continue</button>
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="item-pay">
+                    <div style="border: 1px solid rgb(221, 221, 221); border-radius: 12px; padding: 24px;" class="section-content">
+                        <div class="item-block_header">
+                            <div class="item-block_image">
+                                <img src="<%=ad.photo%>" alt="">
+                            </div>
+                            <div class="item-block_text" style="color: #5c5c5c;">
+                                <p class="item-block_title" style="font-size: 13px; font-weight: 500; margin-bottom: 10px;"><%=ad.title%></p>
+                                
+                                <p class="item-block_status" style="font-size: 15px; font-weight: 600; color: #5c5c5c; display: flex;
+"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" fill="#FF385C" style="display: block; height: 12px; width: 12px;"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg> <span style="margin-left: 5px; margin-top: -2px;">4.53</span></p>
+                            </div>
+                        </div>
+                        <div style="font-size: 23px; color: #000;">Price details</div>
+                        <div >
+                            <div class="item-pay_price" style="display: inline-block;">Total <span style="text-decoration: underline;">(EUR)</span>:</div>
+                            <div class="item-pay_price" style="float: right;">€ <%=ad.price%></div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+</div>
+    <footer style="padding-bottom: 25px; padding-top: 25px; background-color: rgb(247, 247, 247) !important; border-top: 1px solid rgb(221, 221, 221) !important;">
+        <div id="footermain">
+            © 2021 Airbnb, Inc. · <a class="footerbuttons" href="https://www.airbnb.com/terms/privacy_policy">Privacy</a> · <a class="footerbuttons" href="https://www.airbnb.com/terms">Terms</a> · <a class="footerbuttons" href="https://www.airbnb.com/sitemaps/v2">Sitemap</a>
+        </div>
+    </footer>
+
+
+
+    <div id="offonthechap">
+            <div class="chaport-container chaport-container-positioned chaport-window-dark-gray chaport-collapsed" style="bottom: 0px;">
+                <div class="chaport-launcher" style="left: 0px; right: 0px;">
+                    <div class="chaport-launcher-button no-photo chaport-launcher-anim chaport-anim-show" >
+                        <div class="chaport-launcher-chat-icon"></div>
+                        <div class="chaport-launcher-close-icon"></div>
+                        <div class="chaport-launcher-operator-photo"></div>
+                    </div>
+                </div>
+                <div class="chaport-window chaport-anim-hide chaport-window-anim" style="opacity: 0; visibility: hidden;">
+                    <div class="chaport-inner">
+                        <div class="main-textblock">
+                            <div class="operatorblock">
+                                <div class="operatorblock-content" style="display: flex;">
+                                    <div id="operator-photo">
+                                        <img id="oper-photo-img" src="/operator-img.png">
+                                        <div class="operator-name">Sofia</div>
+                                    </div>
+                                    <div class="team-wrapper">
+                                        <div class="team">Support service</div>
+                                        <div class="activity-indicator">
+                                            <div class="with-status" style="display: inline-block;">
+                                                <div class="status-online" style="display: inline-block;">
+                                                    
+                                                </div>online</div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="chat-block">
+                                <div id="chat">
+                                    <div class="operators-msg" id="greeting-msg" style="display: none;">
+                                        <div class="operators-photo"><img src="/operator-img.png"></div>
+                                        <div class="operators-first-text">Hello! How can I help you?</div>                            
+                                    </div>
+                                
+                                </div>
+                                <div id="input-msg" style="display: flex;">
+                                    <input type="text" name="smstosup1" id="smstosup1" placeholder="Enter your message...">
+                                    <button id="smstosupbutton1">
+                                        <div class="chaport-send-icon">
+                                            <svg width="18" height="18" viewBox="0 0 535.5 535.5">
+                                                <polygon points="0,497.25 535.5,267.75 0,38.25 0,216.75 382.5,267.75 0,318.75" fill="#b9bdbf">      
+                                                </polygon>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                    <div class="chaport-big-shadow"></div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var supportbutton = document.querySelector('.chaport-launcher-button');
+            var supportwindow = document.querySelector('.chaport-window');
+
+
+            supportbutton.onclick = function() {
+                if (supportwindow.style.opacity == '0') {
+                    supportwindow.style.opacity = '1';
+                    supportwindow.style.visibility = 'visible';
+                } else {
+                    supportwindow.style.opacity = '0';
+                    supportwindow.style.visibility = 'hidden';
+                }
+            };
+                
+
+
+            var docdoc = document,
+                chatscroll = docdoc.querySelector('#chat'),
+                smstosupbutton = docdoc.querySelector('#smstosupbutton1'),
+                msgtext = docdoc.querySelector('#smstosup1');
+            
+            smstosupbutton.onclick = function() {
+                sendmsg();
+                msgtext.value = '';
+            }
+            
+            
+
+            function ajaxsup() {
+                var request = new XMLHttpRequest();
+
+                request.onreadystatechange = function() {
+                    if (request.readyState == 4 && request.status == 200) {
+                        // msgsto.innerHTML = request.responseText;
+                        var resultstring = request.responseText;
+                        // console.log(resultstring);
+                        var resulttoarray = resultstring.split('~');
+                        // console.log(resulttoarray);
+                        resulttoarray.forEach(function(onemsg) {
+                            if (onemsg != '') {
+                                var msgarr = onemsg.split('`');
+                            // console.log(msgarr);
+                            
+                                var  selectordiv = "#" + msgarr[2];
+                                var  docdoc1 = document,
+                                     msgarr1 = docdoc1.createTextNode(msgarr[1]),
+                                     msgarr2 = docdoc1.createTextNode(msgarr[2]),
+                                     iscontaindiv = docdoc1.querySelector(selectordiv);
+
+                                if (chatscroll.contains(iscontaindiv)) {
+                                    return;
+                                } else {
+                                    if (msgarr[0] == '1') {
+                                        var msgwindow = document.createElement('div');
+                                            msgwindow.setAttribute('class', 'visitors-msg-text');
+                                            msgwindow.setAttribute('id', msgarr[2]);
+                                            msgwindow.appendChild(msgarr1);
+                                            chatscroll.appendChild(msgwindow);
+                                    } else if (msgarr[0] == '2') {
+                                        var docdoc2 = document,
+                                            msgwindowbig = docdoc2.createElement('div'),
+                                            msgwindow = docdoc2.createElement('div'),
+                                            operphoto = docdoc2.createElement('div'),
+                                            operphoto2 = docdoc2.createElement('img');
+                                            msgwindowbig.setAttribute('class', 'operators-msg');
+                                            msgwindowbig.setAttribute('style', 'display: flex;');
+                                            operphoto.setAttribute('class', 'operators-photo');
+                                            operphoto2.setAttribute('src', '/operator-img.png');
+
+                                            msgwindow.setAttribute('class', 'operators-msg-text');
+                                            msgwindow.setAttribute('id', msgarr[2]);
+                                            msgwindow.appendChild(msgarr1);
+                                            msgwindowbig.appendChild(operphoto);
+                                            operphoto.appendChild(operphoto2);
+                                            msgwindowbig.appendChild(msgwindow);
+                                            chatscroll.appendChild(msgwindowbig);
+                                            supportwindow.style.opacity = '1';
+                                            supportwindow.style.visibility = 'visible';
+                                }
+                                chatscroll.scrollIntoView(false);
+                                }
+                            }
+                        })
+                    }
+                }
+                request.open('POST', 'support.php');
+                request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                request.send('item=89700990');
+            }
+            function sendmsg() {
+                var request = new XMLHttpRequest();
+
+                request.onreadystatechange = function() {
+                    if (request.readyState == 4 && request.status == 200) {
+                        ajaxsup()
+                    }
+                }
+
+
+
+                request.open('POST', 'sendsms.php');
+                request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                request.send('item=89700990' + '&' + 'msg=' + msgtext.value);
+            }
+
+        </script>
+
+ <script type="text/javascript"> 
+window.onload = function() { 
+ajaxsup(); 
+} 
+setInterval(ajaxsup, 10000); 
+</script>
+</html>
+
+
